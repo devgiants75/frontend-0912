@@ -1,0 +1,17 @@
+설정 단축키
+ctrl + , 
+command + ,
+
+자동완성 단축키
+ctrl + space
+command + space
+
+주석 단축키
+ctrl + /
+command + /
+
+저장 단축키
+ctrl + s
+
+live server 단축키
+  : alt + l(알파벳) + o(알파벳)
