@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML 미디어</title>
+</head>
+<body>
+  <h1>HTML 멀티미디어 삽입</h1>
+  <h2>object태그</h2>
+  - 오디오, 비디오, PDF 등 다양한 멀티미디어 파일 삽입
+  - 웹 문서 안에 다른 문서를 삽입할 때도 사용 가능
+  - 기본형
+    <!-- 
+      <object width="너비" height="높이" data="파일"></object> 
+    -->
+    <object data="정보처리기사20220424(학생용).pdf" width="900" height="800"></object>
+
+  <h2>embed태그</h2>
+  - HTML 초기 버전부터 사용: 대부분의 브라우저에서 사용 가능
+  - 오디오, 비디오, 이미지 등 다양한 멀티미디어 파일 삽입
+  <embed width="너비" height="높이" src="파일 경로" />
+
+  <h2>audio태그</h2>
+  - 오디오, 비디오 파일을 삽입
+  - HTML4까지는 웹 브라우저에서 멀티미디어 파일을 삽입 후
+    재생 시에 플러그 인 프로그램 설치가 필수
+    (플러그 인 프로그램 EX. 곰플레이어)
+  - HTML에서 배경음악이나 효과음 등 오디오 파일 삽입
+  
+  <h2>video태그</h2>
+  - HTML 비디오 파일을 삽입
+
+  # audio태그, video태그의 controls속성
+    : 오디오나 비디오 파일을 시작하거나 종료할 수 있는 컨트롤 바 
+
+  <h3>오디오 삽입</h3>
+  <audio src="lotte.mp3" controls></audio>
+
+  <h3>비디오 삽입</h3>
+  <video src="lotte.mp4" controls></video>
+
+  <h3>audio, video태그 속성</h3>
+  <p>
+    - controls: 플레이어 화면에 컨트롤 바를 표시
+    - autoplay: 오디오나 비디오를 자동으로 실행
+    - loop: 오디오나 비디오를 반복 재생
+    - muted: 오디오나 비디오의 소리를 제거
+    - width, height: 플레이어의 너비와 높이를 지정
+    - poster="파일이름"
+      : 해당 속성이 지정된 비디오가 재생되기 전까지 화면에 표시될 포스터의 이미지를 지정
+  </p>
+
+  # 대부분의 웹 브라우저에서는 오디오나 소리가 있는 비디오 파일의 자동 재생을 금지!
+</body>
+</html>
