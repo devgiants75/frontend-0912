@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>button & file & hidden</title>
+</head>
+<body>
+  <!--  
+    !button(기본 버튼)
+    : submit이나 reset버튼과 같은 기능 X
+    - 버튼의 형태만을 나타냄.
+
+    - 주로 자바스크립트(기능)를 실행할 때 사용
+
+    !file(파일 첨부)
+    : 사진이나 문서를 첨부
+    - 웹 브라우저 화면에 [파일 선택] 또는 [찾아보기] 버튼 표시
+      (버튼을 클릭하여 파일 선택 시 파일이 첨부)
+    - 첨부한 파일을 서버로 전송하는 기능은 추가적으로
+      JS(JavaScript) 등의 웹 프로그래밍 언어를 사용해야 한다.
+
+    - 초기값은 '선택된 파일 없음'
+
+    !hidden(숨겨진 필드)
+    : 화면의 폼에는 보여지지 않는다.
+      (사용자가 입력을 마치면 폼과 함께 서버로 전송되는 요소)
+    - 사용자에게 보여주지 않으면서
+      관리자가 알아야하는 정보를 히든 필드로 입력
+  -->
+  <form action="">
+    <input type="button" value="버튼"/>
+    <input type="file" />
+    <input type="hidden" value="서버로 넘길 값" />
+  </form>
+</body>
+</html>
