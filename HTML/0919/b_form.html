@@ -46,8 +46,28 @@
       - 기본 속성값이 'on'
       - 속성값을 'off'로 변경: 자동 완성 기능 끄기
   -->
+
+  <!--  
+    폼 요소 그룹화 및 레이블 적용
+    fieldset, legend 태그
+    : 폼 요소를 그룹으로 묶는 태그
+
+    fieldset 태그: 하나의 폼 안에서 여러 구역을 나누어 표시
+    legend 태그: fieldset으로 묶은 그룹에 제목을 붙이는 태그
+  -->
   <form action="">
     안녕하세요
+    <fieldset>
+      <legend>상품 구매</legend>
+      
+      <label for="id">구매자 아이디</label>
+      <input type="text" id="id" />
+
+      <br />
+
+      <label for="password">구매자 비밀번호</label>
+      <input type="password" id="password" />
+    </fieldset>
   </form>
 </body>
 </html>
