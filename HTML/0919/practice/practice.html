@@ -36,7 +36,22 @@
 
     <fieldset>
       <legend>이벤트와 새로운 소식</legend>
+      <input type="radio" id="mailing_yes" name="mailing" />
+      <label for="mailing_yes">메일 수신</label>
+
+      <label for="mailing_no">
+        <input type="radio" id="mailing_no" name="mailing" />
+        메일 수신 안 함
+      </label>
+      <!-- 
+        <input type="radio" id="mailing_no" name="mailing" />
+        <label for="mailing_no">메일 수신 안 함</label> 
+      -->
     </fieldset>
+    <div>
+      <input type="submit" value="가입하기"/>
+      <input type="reset" value="취소" />
+    </div>
   </form>
 </body>
 </html>

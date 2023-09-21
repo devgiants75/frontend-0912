@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Form Tag</title>
+</head>
+<body>
+  <!-- 
+    input태그: 폼에서 한 줄 정도로 간단한 내용을 입력받는 태그
+
+    1. textarea 태그
+    : 여러 줄을 입력하는 텍스트 영역 태그
+    : EX. 게시판 글 입력, 회원 가입 양식에서 사용자 약관
+
+    - textarea의 주요 속성
+    name: 폼 제출 시 데이터를 구별하기 위한 이름.
+    rows: 텍스트 영역의 세로 길이를 줄 단위로 지정.
+          지정한 숫자보다 줄 개수가 많아지면 스크롤 막대 생성
+    cols: 텍스트 영역의 가로 너비를 문자 단위로 지정.
+    placeholder: 사용자에게 입력 예시나 설명을 보여주기 위한 텍스트.
+
+    2. select & option 태그
+    : 드롭다운 목록을 만들어주는 태그
+    - 사용자가 내용을 직접 입력하지 않고 '여러 옵션 중에서' 선택
+
+    2-1. select: 드롭다운 목록
+    : 목록 클릭 시 옵션이 요소 아래쪽으로 펼쳐짐.
+    : 목록의 시작과 끝을 표시
+
+    2-2. option: 데이터 목록
+    : 원하는 항목 추가
+
+    - select 속성
+    name속성: 폼 제출 시 데이터를 구별하기 위한 이름. 
+    size속성: 화면에 표시할 드롭다운 항목의 개수를 지정
+    multiple속성: 여러 옵션을 선택할 수 있도록 지정
+
+    - option 속성
+    value속성: 해당 항목을 선택할 때 서버로 넘겨줄 값을 지정
+    selected속성: 해당 옵션을 기본으로 선택하게 함.
+
+    3. datalist & option 태그
+    : 데이터 목록을 만들어 주는 태그
+    : 텍스트 필드에 값을 직접 입력 X
+      , '미리 만들어 놓은 값'중에서 선택
+    : input 태그에 사전에 정의된 옵션을 제공하기 위해 사용
+            자동 완성 기능을 사용하기 위해 주로 사용
+
+    3-1. datalist 태그
+    : 데이터 목록의 시작과 끝을 표시
+
+    3-2. option 태그
+    : 각 데이터의 옵션을 표시
+
+    - datalist 속성
+    id: input의 list 속성과 연결하기 위한 식별자
+
+    - option 속성
+    value: 서버로 넘겨주는 값 지정
+
+    4. button 태그
+    : 버튼을 만들어주는 태그
+      폼을 전송하거나 리셋하는 버튼을 삽입 가능
+      != input 태그의 type="button": 오직 버튼의 형태만 삽입
+
+    - button 속성
+    submit: input태그 type의 submit과 동일
+    reset: input태그 type의 reset과 동일
+    button: input태그 type의 button과 동일
+    
+    - input태그가 아닌 button 태그를 사용하는 이유
+    : 화면 낭독기로 웹 문서를 읽을 때 button태그를 만나면
+      이 부분에 버튼이 있다는 것을 정확하게 전달
+  -->
+
+  <h2>textarea</h2>
+  <textarea placeholder="반갑습니다.">안녕하세요!</textarea>
+  <br />
+  <input type="text" placeholder="반갑습니다." value="안녕하세요!" />
+  <br />
+
+  <!-- 
+    가로너비: 10, 세로 줄: 5 
+
+    cols에서 지정하는 글자 수는 영문자를 기준
+    - 한글 1글자는 영문자 2글자에 해당
+  -->
+  <textarea cols="20" rows="5"></textarea>
+
+  <h2>select & option</h2>
+  <select name="fruits">
+    <option value="1">Apple</option>
+    <option value="2">Banana</option>
+    <option value="3">Orange</option>
+    <option value="4" selected>Cherry</option>
+    <option value="5">Mango</option>
+  </select>
+
+  <h2>datalist & option</h2>
+  <input type="text" list="fruit" />
+  <datalist id="fruit">
+    <option value="Apple" />
+    <option value="Banana">선택 옵션2</option>
+    <option value="Orange">선택 옵션3</option>
+  </datalist>
+
+
+</body>
+</html>
