@@ -1,0 +1,117 @@
+1. git 설치
+
+>> 구글 git 검색
+  'Downloads'버튼 클릭하여 설치 파일 다운로드
+  '64-bit Git for Windows Setup'설치
+
+>> 설치 확인
+  Windows사용자: cmd(명령 프롬프트) or Git bash(Git 설치 시 자동 설치) 실행
+
+  MacOS사용자: 터미널 실행
+
+  Linux사용자(Ubuntu): 
+  sudo apt update
+  sudo apt install git
+
+  : git --version
+
+2. 환경 설정(git config)
+  검색 > 자격 증명 관리자 > Windows 자격 증명
+  > 일반 자격 증명
+  > git, github, sourcetree 영역에서 
+    사용자 이름이 본인의 것이 아니라면 제거!
+  > github에 로그인 필수!
+
+  : 전역(Global) 수준에서 Git 사용자 이름과 이메일을 설정
+
+  cmd 또는 git bash 환경에서 사용
+
+  <환경 설정 확인 명령어>
+  git config --global user.name 
+  git config --global user.email
+
+  <전역 사용자 정보 설정 명령어>
+  git config --global user.name 본인아이디
+  git config --global user.email 본인이메일
+
+  >> 전역 사용자 정보 변경 후에는 확인 명령어를 사용해
+    변경사항 적용 확인 필수!
+
+  <설정 확인>
+  git config --list
+
+3. gitHub에서 리포지토리 생성
+  > Repository name
+    (영문자, 숫자로 작성 / 띄어쓰기는 -하이픈으로 대체)
+  > Description
+
+  !무조건 public 체크!
+  > Create Repository 버튼 클릭하여 생성
+
+  > 작업 디렉토리를 새롭게 생성!
+  > VSC의 터미널 또는 git bash에서
+  > 아래의 명령어를 입력!
+
+  > VSC 터미널 단축키: ctrl + shift + `
+  > 기본 터미널 프로필 설정: git bash로 지정
+
+  echo "# frontend-html-css" >> README.md
+  git init
+  git add README.md
+  git commit -m "first commit"
+  git branch -M main
+  git remote add origin https://github.com/devgiants75/frontend-html-css.git
+  git push -u origin main
+
+4. 폴더의 업데이트 내용을 깃허브에 올리기
+  4-0. 현재 working derectory와 staging area의 상태를 확인!
+  : git status
+
+  4-1. 특정 파일/폴더 스테이징
+  > git add fileName.txt (파일명.확장자 / 폴더명)
+  모든 변경 파일 스테이징
+  > git add .
+
+  4-2. 변경사항 커밋(저장)
+  > git commit -m "커밋 메시지 작성"
+  커밋 메시지: 20230921 lsa git 학습내용 저장
+
+  4-3. 로컬 리포지토리 변경 내용을 원격 리포지토리에 업로드
+  > git push origin main
+
+// 생성된 github 리포지토리의 데이터를 다운로드 하는 법// 
+
+1. git init
+: 새로운 Git 리포지토리를 초기화하거나
+  기존 디렉토리를 Git 리포지토리로 변환
+
+2. branch명 변경
+: git branch -M main
+
+3. git remote add origin 생성된 깃허브 리포지토리 주소
+
+4. git pull origin main
+
+// 같은 리포지토리를 2개 이상의 환경에서 업로드 할 경우
+1. 학원 작업물 push
+
+2. 집에서 학원 작업물을 pull
+
+3. 집에서 작업
+
+4. 집 작업물 push
+
+5. 학원에서 집 작업물을 pull 하고나서 작업
+
+// 5의 과정을 거치지 않은 경우
+학원에서 push 하기 전에 
+add와 commit을 진행하고 push 이전에
+git pull origin main을 진행한 뒤에
+git push origin main으로 학원의 작업을 업로드
+
+git status
+
+git add .
+git commit -m ""
+git pull origin main
+git push origin main
