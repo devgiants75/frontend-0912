@@ -1,0 +1,21 @@
+body {
+  font-family: '맑은 고딕', 돋움, 굴림;
+}
+
+.one {
+  font-size: xx-small;
+}
+
+.two {
+  font-size: 150%;
+  font-style: italic;
+}
+
+.three {
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.four {
+  font-size: 16px;
+}
