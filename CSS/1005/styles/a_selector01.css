@@ -1,0 +1,22 @@
+h1, h2, p {
+  color: green;
+}
+
+/* 하위 선택자 */
+section p {
+  color: blue;
+}
+
+/* 자식 선택자 */
+section > p {
+  color: pink;
+}
+
+/* 인접 형제 선택자 */
+h1 + p {
+  background-color: black;
+}
+
+h1 ~ p {
+  font-weight: bolder;
+}
