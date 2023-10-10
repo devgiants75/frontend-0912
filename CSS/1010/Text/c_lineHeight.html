@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>텍스트 높이</title>
+  <link rel="stylesheet" href="styles/c_lineHeight.css">
+</head>
+<body>
+  <!--  
+    ^ CSS 단위
+    : 숫자, 길이, 백분율
+    > 1. 숫자
+      : CSS에서 사용되는 순수한 숫자 값.
+      : 일반 수학에서 사용되는 숫자로 값을 표시
+
+    > 2. 길이
+      : 특정 길이를 나타냄.
+      : 여러 단위를 포함
+      2-1. px(픽셀, 포인트)
+        : 절대 단위, 화면의 각 픽셀을 기준
+      2-2. em
+        : 부모 요소에서 지정한 글꼴의 대문자 M의 너비를 기준으로 1em을 설정
+      2-3. rem
+        : 문서 시작 부분(root)에서 지정한 크기를 기준으로 1rem을 설정
+    
+    > 3. 백분율
+      : 부모 요소에 대한 비율을 나타내는 단위
+
+    ! 3. line-height
+    : 각 텍스트 줄의 높이를 설정(줄 간격 조절)
+    : 권장 줄 높이: 글자 크기의 약 1.5 ~ 2배 간격
+
+    line-height 속성값 설정법
+
+    ? 길이 지정(px)
+    글자 크기가 12px인 p요소의 줄 간격: 24px
+
+    ? 숫자 지정
+    글자 크기의 배수로 지정 (1.5 ~ 2)
+
+    ? 백분율
+    배수를 백분율로 지정 (150% ~ 200%)
+
+    >> line-height 속성을 사용하여 텍스트 세로 정렬
+    : line-height 속성값을 추가하여 
+      영역의 높이를 나타내는 height의 속성값과 동일하게 지정
+  -->
+  
+  <h1>Line Height</h1>
+  <!--  
+    p태그의 글자 크기 12px
+    줄 간격이 글자 크기의 2배가 되도록 지정(단위 - px, 숫자, 백분율)
+  -->
+  <p>
+    Israel’s defense minister said the authorities would block deliveries of food, water and fuel into the already blockaded enclave. A spokesman for Hamas’s military wing threatened to execute a hostage each time an Israeli airstrike hits Gazans in their homes.
+    Oct. 9, 2023
+    New Your Times
+  </p>
+</body>
+</html>

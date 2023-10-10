@@ -1,0 +1,63 @@
+h2 {
+  background-color: pink;
+}
+
+a {
+  text-decoration: none;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.overline {
+  text-decoration: overline;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+/* Text Shadow */
+.shadow-basic {
+  font-size: 36px;
+  color: #4a90e2;
+  text-shadow: 2px 2px 2px #aaaaaa;
+}
+
+.shadow-reverse {
+  font-size: 36px;
+  color: #4a90e2;
+  text-shadow: -2px -2px 2px #aaaaaa;
+}
+
+button {
+  background-color: #e94e77;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 20px;
+  border: none;
+  text-shadow: 1px 1px 10px #000000;
+}
+
+/* 텍스트 변형 */
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+/* 글자 간격 조정 */
+.letter-spacing {
+  letter-spacing: 4px;
+}
+
+.word-spacing {
+  word-spacing: 8px;
+}

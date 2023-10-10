@@ -1,0 +1,33 @@
+h1 {
+  /* 글자 크기 60px */
+  font-size: 60px;
+  /* 너비 부모 요소의 100% */
+  width: 100%;
+  /* 높이 150px */
+  height: 150px;
+  /* 배경색 purple */
+  background-color: purple;
+  /* 글자색 white를 16진수 */
+  color: #ffffff;
+  /* 텍스트 가로 정렬 - 가운데 */
+  text-align: center;
+  /* 텍스트 세로 정렬을 위한 줄 간격 조절 */
+  line-height: 150px;
+}
+
+/* 줄 간격 조절 */
+
+/* p {
+  font-size: 12px;
+  line-height: 24px;
+} */
+
+/* p {
+  font-size: 12px;
+  line-height: 1.5;
+} */
+
+p {
+  font-size: 12px;
+  line-height: 180%;
+}
