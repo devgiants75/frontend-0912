@@ -4,8 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>네이버 로그인 클론코딩</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <!-- Header, 헤더 영역의 컨테이너 역할 -->
+  <div class="header">
+    <!-- 헤더 내부 요소를 담는 div, 스타일링, 구조화에 활용 -->
+    <div class="header-inner">
+      <a href="https://naver.com" class="logo">
+        <!-- 화면상에 보이지 X, 스크린 리더기에서 활용 -->
+        <h1 class="blind">NAVER</h1>
+      </a>
+      <div class="lang">
+        <select class="select">
+          <option>한국어</option>
+          <option>English</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+    <div class="content">
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <!-- 로그인 -->
+    <div class="sign-in-wrapper">
+      <form id="form">
+        <ul class="panel-wrapper">
+          <li class="panel-item">
+            <div class="id-password-wrapper">
+              <div class="input-row">
+                <!-- 아이디 아이콘을 표시할 부분 -->
+                <div class="icon-cell">
+                  <span class="icon-id">
+                    <span class="blind">
+                      아이디
+                    </span>
+                  </span>
+                </div>
+                <!-- 아이디 입력 텍스트 필드 -->
+                <input 
+                  type="text" class="input-text" maxlength="41" placeholder="아이디" name="id" id="id" 
+                />
+              </div>
+            </div>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
