@@ -61,3 +61,15 @@ button {
 .word-spacing {
   word-spacing: 8px;
 }
+
+/* 텍스트 들여쓰기 */
+p {
+  text-indent: 30px;
+}
+
+/* 텍스트 overflow */
+.overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -50,6 +50,36 @@
       ? letter-spacing(글자와 글자 사이 간격)
       ? word-spacing(단어와 단어 사이 간격)
       > 음숫값 사용 시 간격 축소
+
+    ! 5. text-indent
+      : 텍스트 들여쓰기
+      속성값
+      ? 픽셀(px), 백분율
+
+    ! 6. white-space
+      : 공백 처리
+      속성값
+      ? normal(기본값)
+      ? nowrap
+        : 영역 너비를 넘어가는 줄을 바꾸지 않고 계속 한 줄로 표시
+
+    ! 7. text-overflow
+      : 넘치는 텍스트 표기하기
+      : white-space속성이 nowrap이고
+        overflow 속성이 hidden, scroll, auto일 때만 적용
+      속성값
+      ? clip: 넘치는 텍스트를 자름.
+      ? ellipsis: 말 줄임표(...)로 잘린 텍스트가 있다고 표시
+
+      ! overflow 속성
+        : 요소의 크기(너비, 높이) 내에서 콘텐츠가 너무 많아서
+          넘쳤을 때 어떻게 처리할지를 지정
+        속성값
+        ? visible(기본값)
+        ? hidden: 오버플로우된 콘텐츠가 잘림. (스크롤바 제공 X)
+        ? scroll: 스크롤 바가 항상 표시
+        ?         실제로 콘텐츠가 넘치지 않더라도 표시
+        ? auto: 콘텐츠가 넘칠 경우에만 스크롤바가 표시 
   -->
   <h2>Text Decoration</h2>
   <a href="#">Text Decoration - none</a>
@@ -73,6 +103,14 @@
   </p>
   <p class="word-spacing">
     Hello my name is Lee Seung Ah
+  </p>
+
+  <h2>Text Overflow</h2>
+  <p class="overflow">
+    Hello my name is Lee Seung Ah. 
+    Hello my name is Lee Seung Ah. 
+    Hello my name is Lee Seung Ah. 
+    Hello my name is Lee Seung Ah.
   </p>
 </body>
 </html>

@@ -1,0 +1,27 @@
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  caption-side: bottom;
+}
+
+td, th {
+  border: 1px solid black;
+  width: 70px;
+  height: 50px;
+}
+
+.heading {
+  background-color: #eee;
+}
+
+/* 
+.col-one {
+  background-color: blueviolet;
+}
+.col-two {
+  background-color: aliceblue;
+}
+.col-three {
+  background-color: antiquewhite;
+} 
+*/
