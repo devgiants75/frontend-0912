@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #222222;
+  display: inline-block;
+}
+
+#margin1 {
+  margin: 50px;
+}
+
+#margin2 {
+  margin: 30px 50px;
+}
+
+#margin3 {
+  margin: 30px 20px 50px;
+}
+
+#margin4 {
+  margin-top: 20px;
+}
+
+#margin5 {
+  margin-right: 30px;
+}
+
+#margin6 {
+  display: flex;
+  margin: 30px auto;
+}

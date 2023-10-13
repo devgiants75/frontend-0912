@@ -1,0 +1,17 @@
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around; /* try changing this */
+  height: 300px;
+  border: 2px solid #333;
+}
+.flex-item {
+  width: 100px;
+  height: 100px;
+  background-color: LightSkyBlue;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  line-height: 100px;
+  margin: 5px;
+}
