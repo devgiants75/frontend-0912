@@ -1,0 +1,26 @@
+/* 기본 웹 페이지 설정 */
+/* 전체 마진 0 설정 */
+body {
+  margin: 0;
+}
+
+/* 상단 header */
+
+
+/* 메인 article */
+article {
+  /* 패딩, 마진 10px */
+
+  /* flex: flex-grow 1, flex-basis 200px */
+}
+
+/* 메인 article - section(플렉스 박스 컨테이너) */
+section {
+
+}
+
+/* 
+마지막 article
+, flex-grow 3, 기본크기 200px 
+내부를 플렉스 컨테이너로 지정, 방향 column
+*/

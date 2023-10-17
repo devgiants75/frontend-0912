@@ -44,13 +44,21 @@
         ? space-around
           : items 주위에 동일한 공간이 분배 (space-evenly)
           : 끝에 있는 items는 주위 공간의 절반 만큼만 갖게됨.
+
+    ! order
+      : flex item 순서를 정하는 속성     
+      속성값
+        ? 기본값으로 모든 flex item들은 order값이 0
+        ? 순위값이 높은 flex item들은 디스플레이 순서상 순위값이 낮은 항목들보다 나중에 나타남.
+        ? 순위값이 동일한 항목일 경우: 소스코드 순서대로 나열
+        
   -->
   <div>
     <button id="self">button01</button>
-    <button>button02</button>
-    <button>button03</button>
-    <button>button04</button>
-    <button>button05</button>
+    <button id="btn2">button02</button>
+    <button id="btn3">button03</button>
+    <button id="btn4">button04</button>
+    <button id="btn5">button05</button>
   </div>
 </body>
 </html>
