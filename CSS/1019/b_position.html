@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Position</title>
+  <link rel="stylesheet" href="styles/b_position.css">
+</head>
+<body>
+  <!-- 
+    ! left, right, top, bottom 속성
+      : 웹 요소의 위치를 지정
+      : position 속성으로 '기준 위치'를 설정한 뒤
+        요소의 위치를 좌, 우, 상, 단 속성에서 선택하여 속성값 지정
+      : 기준위치와 요소 사이에 방향으로 얼마나 떨어져 있는지 지정
+    
+    ! position 속성 
+      : 위치, 웹 문서에서 요소의 위치를 지정
+      : 배치 방법을 지정(기준 위치)
+        웹 문서 안의 요소를 배치
+        텍스트나 이미지를 나란히 배치 | 원하는 위치 선택 가능
+      ? 속성값
+        1. static
+          : 기본값
+          : 특별한 위치 속성 없이 일반적인 문서 흐름에 따라 요소가 배치
+        2. relative(상대적인)
+          : static + 위치값 지정
+          : 기본 위치에서 top, right, bottom, left 속성을 사용하여 조정 가능
+          : top: -50px
+            위쪽에서 -50px 떨어지게 (위로 이동)
+          : 요소의 방향부분을 기준으로 해당 방향과 반대로 얼마나 이동할지 지정
+            ex) top: 요소의 상단 부분을 기준으로 아래쪽으로 얼마나 이동할지 지정
+          
+        3. absolute(절대적인)
+          : relative 값을 사용한 상위 요소를 기준으로 위치를 지정하여 배치
+          : 가장 가까운 위치가 지정된 부모 요소(즉, position이 static이 아닌 요소)에 대해 상대적으로 배치
+        4. fixed(고정적인)
+          : 브라우저 창을 기준으로 위치를 지정하여 배치
+          : 스크롤을 해도 위치가 변하지 X
+        5. sticky
+          : relative 와 fixed의 조합처럼 작동
+          : 스크롤 위치에 따라 '붙어있게'되거나 일반적인 위치에 머무를 수 있다. 
+  -->
+  <p id="static">특별한 위치 속성 없이 일반적인 문서 흐름에 따라 요소가 배치</p>
+  <p id="relative">기본 위치에서 top, right, bottom, left 속성을 사용하여 조정 가능</p>
+  <div>
+    <p id="absolute">가장 가까운 위치가 지정된 부모 요소(즉, position이 static이 아닌 요소)에 대해 상대적으로 배치</p>
+  </div>
+  <p id="fixed">브라우저 창을 기준으로 위치를 지정하여 배치</p>
+  <p id="sticky">스크롤 위치에 따라 '붙어있게'되거나 일반적인 위치에 머무를 수 있다.</p>
+</body>
+</html>

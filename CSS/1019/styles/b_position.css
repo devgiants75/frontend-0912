@@ -1,0 +1,44 @@
+p {
+  width: 400px;
+  height: 100px;
+  background-color: #eeeeee;
+  border: 1px solid #cccccc;
+  line-height: 2;
+}
+
+#static {
+  position: static;
+}
+
+#relative {
+  position: relative;
+  /* 요소를 기준으로 왼쪽으로 20px 공간 부여 */
+  left: 20px;
+  /* 요소를 기준으로 위쪽으로 -20px 공간 부여 */
+  top: -20px;
+}
+
+div {
+  position: relative;
+  width: 500px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+#absolute {
+  position: absolute;
+  top: 20px;
+  /* 상위요소(div)의 우측에서 10px 위치에 배치 */
+  right: 10px;
+}
+
+#fixed {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+#sticky {
+  position: sticky;
+  top: 0;
+}
