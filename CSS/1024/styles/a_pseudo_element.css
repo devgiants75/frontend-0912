@@ -1,0 +1,60 @@
+.navi {
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  width: 150px;
+}
+
+.navi ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navi li {
+  margin-bottom: 5px;
+}
+
+.navi li a {
+  text-decoration: none;
+  color: #000000;
+  padding: 5px;
+  display: block;
+  border: 1px solid transparent;
+  transition: background-color 0.3s, border 0.3s;
+}
+
+.navi li a:hover,
+.navi li a:active,
+.navi li a:focus {
+  border: 1px solid #0069E9;
+  background-color: #f0f0f0;
+}
+
+#intro:target,
+#room:target,
+#pay:target,
+#reservation:target {
+  /* 앵커 대상이 될 때의 배경색, 글자색 */
+  background-color: #0069E9;
+  color: #ffffff;
+}
+
+/* 가상 클래스 선택자 - 폼  */
+
+input[type='checkbox']:not(:checked) + label,
+input[type='radio']:checked + label {
+  /* font-weight: bold;
+  color: #0069E9; */
+  color: #a0a0a0;
+}
+
+/* 사용가능한(disabled가 아닌) 입력 필드 스타일 */
+input[type='text']:enabled {
+  border: 1px solid #0069E9;
+}
+
+/* 사용 불가능한 (disabled인) 입력 필드 스타일 */
+input[type='text']:disabled {
+  background-color: #f0f0f0;
+  border: 1px solid #e0e0e0;
+}

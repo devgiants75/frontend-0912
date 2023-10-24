@@ -1,0 +1,76 @@
+body {
+  background-image: url('../../../images/lotte.jpeg');
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+}
+
+#container {
+  display: flex;
+
+}
+
+.desc {
+  border: 5px dotted #222222;
+  background-color: #ffd9a0;
+  width: 350px;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+#clip-border {
+  background-clip: border-box;
+}
+
+#clip-padding {
+  background-clip: padding-box;
+}
+
+#clip-content {
+  background-clip: content-box;
+}
+
+/* 배경 이미지 위치 설정 */
+ul {
+  list-style-type: none;
+  margin-left: -30px;
+}
+
+li {
+  background-image: url(../../../images/lotte.jpeg);
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 50px;
+  line-height: 50px;
+}
+
+/* 배경 이미지 크기 조절 */
+
+#container > div {
+  border: 1px solid #222222;
+  width: 150px;
+  height: 150px;
+  background-image: url('../../../images/lotte.jpeg');
+}
+
+#bg1 {
+  background-size: auto;
+}
+#bg2 {
+  background-size: 200px;
+}
+#bg3 {
+  /* 너비는 요소 기준으로 50%, 높이는 자동계산 */
+  background-size: 50%;
+}
+#bg4 {
+  background-size: 100% 100%;
+}
+#bg5 {
+  /* 요소의 배경 이미지가 다 보이게 표시 */
+  background-size: contain;
+}
+#bg6 {
+  /* 요소를 완전히 덮도록 배경 이미지 표시 */
+  background-size: cover;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS transition & animation</title>
+  <link rel="stylesheet" href="styles/e_transform.css">
+</head>
+<body>
+  <!--  
+    transform(변형)
+    : 특정 요소의 크기나 형태 등 스타일이 바뀌는 것
+    transform속성 사용
+    - transform: 함수
+
+    ! 2차원 변형
+      : 수평이나 수직으로 웹 요소를 변형
+      : 크기나 각도만 지정
+      : 2차원 좌표 사용
+
+    ! 3차원 변형
+      : x축과 y축에 원근감 추가
+      : z축 - 앞 뒤로 이동, 보는 사람 쪽으로 다가올 수록 값이 더 커짐
+
+    ? translate 함수
+      : 지정한 방향으로 이동할 거리를 지정하면 해당 요소를 이동시킴
+      translate(tx, ty)
+      > 값이 하나일 경우 tx로 간주하고 ty는 0으로 간주
+  -->
+  <div id="container">
+    <div class="origin">
+      <div id="movex"></div>
+    </div>
+    <div class="origin">
+      <div id="movey"></div>
+    </div>
+    <div class="origin">
+      <div id="movexy"></div>
+    </div>
+  </div>
+</body>
+</html>
