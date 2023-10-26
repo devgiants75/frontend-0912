@@ -35,9 +35,58 @@ body {
   card 내부는 가로 배치
   , 전체 container 자식요소(카드)는 세로 배치(그대로)  
 */
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  #container {
+    width: 570px;
+    margin: 50px auto;
+  }
+
+  #card {
+    position: relative;
+    width: 550px;
+    height: 250px;
+    margin: 10px;
+    border: 1px solid #0f0f0f;
+    background-color: white;
+  }
+
+  .words {
+    position: absolute;
+    left: 310px;
+    top: 50px;
+    text-align: center;
+    width: 200px;
+  }
+}
 
 /* 데스크톱 사이즈 */
 /*  
   card 내부 가로 배치
   , 전체 container 자식요소(카드)는 가로 배치
 */
+
+@media screen and (min-width: 1440px) {
+  #container {
+    width: 1140px;
+    margin: 50px auto;
+  }
+
+  #card {
+    position: relative;
+    /* 카드를 가로로 배치 */
+    float: left;
+    width: 550px;
+    height: 250px;
+    margin: 10px;
+    border: 1px solid #0f0f0f;
+    background-color: white;
+  }
+
+  .words {
+    position: absolute;
+    left: 310px;
+    top: 50px;
+    text-align: center;
+    width: 200px;
+  }
+}
