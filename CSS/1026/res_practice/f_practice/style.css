@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(174, 215, 252);
+}
+
+#container {
+  width: 320px;
+  margin: 50px auto;
+}
+
+#card {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  margin: 10px;
+  border: 1px solid #0f0f0f;
+  background-color: white;
+}
+
+.words {
+  position: absolute;
+  left: 10px;
+  top: 300px;
+  text-align: center;
+  width: 200px;
+}
+
+/* 태블릿 사이즈 */
+/* 
+  card 내부는 가로 배치
+  , 전체 container 자식요소(카드)는 세로 배치(그대로)  
+*/
+
+/* 데스크톱 사이즈 */
+/*  
+  card 내부 가로 배치
+  , 전체 container 자식요소(카드)는 가로 배치
+*/

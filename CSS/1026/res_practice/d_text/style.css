@@ -1,0 +1,17 @@
+.responsive-text {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 600px) {
+  .responsive-text {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .responsive-text {
+    font-size: 24px;
+    font-weight: bolder;
+  }
+}
