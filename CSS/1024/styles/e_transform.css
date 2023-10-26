@@ -31,3 +31,25 @@
 #movexy:hover {
   transform: translate(10px, 20px);
 }
+
+#scaleX {
+  transform: scaleX(2);
+}
+
+#scaleY {
+  transform: scaleY(1.5);
+}
+
+#scale {
+  transform: scale(0.1);
+}
+
+#rotate1:hover {
+  /* 양수값: 오른쪽으로 회전 */
+  transform: rotate(40deg);
+}
+
+#rotate2:hover {
+  /* 음수값: 왼쪽으로 회전 */
+  transform: rotate(-40deg);
+}
