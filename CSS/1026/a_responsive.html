@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <!--  
+    width: 뷰포트의 너비 설정
+      device-width: 디바이스의 화면 너비에 맞춤
+    initial-scale: 페이지가 처음 로드될 때의 줌 레벨을 설정
+      1.0: 페이지의 너비가 뷰포트의 너비와 일치하도록 조정
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형 웹 디자인</title>
+  <link rel="stylesheet" href="styles/a_responsive.css">
+</head>
+<body>
+  <!--  
+    ! 반응형 웹 디자인
+    (Responsive Web Design, RWD)
+    : 웹 페이지가 모든 화면 크기와 해상도에서 적절하게 반응하여
+      콘텐츠를 최적화된 형태로 표시하는 웹 디자인 방법론
+
+      ? 반응형 웹 디자인 사용 목적
+        - 유연성: 하나의 웹 사이트로 다양한 디바이스에서 최적화된 경험 제공 가능.
+        - 비용 절감
+        - 유지 보수
+
+    ! 미디어 쿼리
+      (Media Query)
+      : 다양한 디바이스의 특성에 따라 다른 스타일을 적용할 수 있도록 하는 CSS 기법
+
+      ? 뷰포트 (viewport)
+        : 사용자의 브라우저 창의 크기
+        : 미디어 쿼리를 사용하여 뷰포트의 크기에 따라 다른 스타일 적용 가능
+      
+      ? 기본 구문
+      @media [only | not] 미디어 유형 [and 조건] * [and 조건] {
+        /* CSS 스타일 적용 */
+      }
+      - only: 미디어 쿼리를 지정하지 않는 웹 브라우저에서는 미디어 쿼리를 무시하고 실행하지 X
+      - not: 다음에 지정하는 미디어 유형을 제외
+      - and: 조건을 여러 개 연결해서 추가
+      - ,: 조건 중에서 하나라도 일치하면 실행
+
+      - 미디어 유형
+        all: 모든 미디어 유형에서 사용
+        print: 인쇄 장치에서 사용
+        screen: 컴퓨터 스크린에서 사용
+                (스마트폰의 스크린도 포함)
+        tv: 음성과 영상이 동시에 출력되는 tv에서 사용
+
+      - 너비와 높이
+        width, height / device-widht, height
+          : 기본 너비와 높이
+        min-width, min-height / min-device-width,height
+          : 최소 너비와 최소 높이(해당 크기가 되기 전까지 적용)
+        max-width, max-height / max-device-width,height
+          : 최대 너비와 최대 높이(해당 크기까지 적용)
+
+      - 방향성
+        : 디바이스가 세로모드인지 가로모드인지 검사하는 기능
+        가로 배치 - orientation: landscape;
+        세로 배치 - orientation: portrait;
+
+      - aspect-ratio
+        뷰포트의 가로 대 세로 비율을 기준으로 조건을 설정
+        aspect-ratio: 16/9
+        aspect-ratio: 4/3
+
+      - 포인팅 장치 사용
+        hover, pointer 미디어 기능
+        : 사용자가 터치스크린으로 장치와 상호 작용할 경우 지정 가능
+
+    ! 미디어 쿼리 분기점 선정
+      - breakpoints: 미디어쿼리가 도입되는 지점
+      - Mobile First 디자인 원칙
+        : 먼저 모바일 기기에 최적화된 디자인을 만든 후
+          태블릿이나 데스크톱과 같은 더 큰 화면에 맞게 확장
+          >> 웹 사용자들이 모바일 기기에서 인터넷을 사용하는 비율이 크게 증가함에 따라 중요!
+      1. 작은 화면에서 시작
+      2. 점진적 향상
+  -->
+  <h1>안녕하세요</h1>
+  <p>
+    반응형 웹 디자인
+    : 웹 페이지가 모든 화면 크기와 해상도에서 적절하게 반응하여
+      콘텐츠를 최적화된 형태로 표시하는 웹 디자인 방법론
+  </p>
+
+</body>
+</html>
