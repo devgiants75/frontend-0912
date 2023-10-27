@@ -263,6 +263,7 @@
   background-color: #dadada;
 }
 
+/* Banner 영역 스타일링 */
 .banner-wrapper {
   width: 460px;
   height: 147px;
@@ -282,6 +283,7 @@
   height: 147px;
 }
 
+/* Footer 영역 스타일링 */
 .footer {
   padding: 63px 0 32px;
 }
@@ -339,4 +341,21 @@
 
 .footer-item span {
   vertical-align: top;
+}
+
+/* 로그인 에러 메시지 출력 스타일링 */
+.sign-in-error {
+  position: relative;
+  min-height: 34px;
+  margin: 24px 0 -24px;
+  padding-right: 40px;
+}
+
+.error-message {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.5px;
+  color: #ff003e;
+  vertical-align: middle;
 }
