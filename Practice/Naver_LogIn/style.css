@@ -24,8 +24,8 @@
 
 .blind {
   position: absolute;
-  width: 1;
-  height: 1;
+  width: 1px;
+  height: 1px;
   overflow: hidden;
 }
 
@@ -77,6 +77,10 @@
   box-shadow: 0 5px 8px 0 rgba(68, 68, 68, 0.04);
 }
 
+.panel-inner {
+  padding: 20px 28px;
+}
+
 .input-row {
   position: relative;
   /* 요소를 테이블처럼 표시 */
@@ -86,8 +90,7 @@
     셀의 너비가 동일하게 유지
    */
   table-layout: fixed;
-  /*  */
-  width: 100%;
+  width: -webkit-fill-available;
   height: 100%;
   border: 1px solid #dadada;
   padding: 14px 17px 13px;
@@ -146,8 +149,7 @@
   position: relative;
   display: table-cell;
   padding-right: 30px;
-  /*  */
-  width: 100%;
+  width: -webkit-fill-available;
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
@@ -222,4 +224,119 @@
   font-weight: 700;
   line-height: 24px;
   color: #fff;
+}
+
+.find-wrapper {
+  padding: 20px 0 35px;
+  text-align: center;
+}
+
+.find-wrapper li {
+  position: relative;
+  display: inline-block;
+}
+
+.find-text {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  color: #888;
+  /* 요소를 수직으로 상단에 맞춤. */
+  vertical-align: top;
+}
+
+.find-wrapper li+li {
+  /* 인접한 li 요소에 왼쪽 패딩을 추가 */
+  padding-left: 28px;
+}
+
+.find-wrapper li+li::before {
+  /* 가상 요소의 내용은 비워둠 */
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 12px;
+  width: 1px;
+  height: 12px;
+  border-radius: 0.5px;
+  background-color: #dadada;
+}
+
+.banner-wrapper {
+  width: 460px;
+  height: 147px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.banner-content {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  line-height: 0;
+}
+
+.banner-img {
+  width: 460px;
+  height: 147px;
+}
+
+.footer {
+  padding: 63px 0 32px;
+}
+
+.footer-inner {
+  position: relative;
+  text-align: center;
+}
+
+.footer li {
+  position: relative;
+  display: inline-block;
+}
+
+.text {
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.05px;
+  color: #888;
+}
+
+.footer-link li+li {
+  position: relative;
+  padding-left: 13px;
+}
+
+.footer-link li+li::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 1px;
+  height: 11px;
+  background-color: #dadada;
+}
+
+.footer-logo {
+  display: inline-block;
+  vertical-align: bottom;
+  background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_00_common_978240a6.png);
+  background-size: 244px 107px;
+  width: 70px;
+  height: 15px;
+  background-position: -157px -51px;
+  background-repeat: no-repeat;
+}
+
+.copy {
+  padding: 0 2px;
+  font-weight: 500;
+  color: #000;
+  font-size: 12px;
+  letter-spacing: -0.5px;
+}
+
+.footer-item span {
+  vertical-align: top;
 }

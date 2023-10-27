@@ -34,55 +34,57 @@
         <form id="form">
           <ul class="panel-wrapper">
             <li class="panel-item">
-              <!-- 아이디와 비밀번호 입력 부분을 감싸는 div -->
-              <div class="id-password-wrapper">
-                <!-- 아이디 입력 부분을 감싸는 div -->
-                <div class="input-row">
-                  <!-- 아이디 아이콘을 표시할 부분 -->
-                  <div class="icon-cell">
-                    <span class="icon-id">
-                      <span class="blind">
-                        아이디
+              <div class="panel-inner">
+                <!-- 아이디와 비밀번호 입력 부분을 감싸는 div -->
+                <div class="id-password-wrapper">
+                  <!-- 아이디 입력 부분을 감싸는 div -->
+                  <div class="input-row">
+                    <!-- 아이디 아이콘을 표시할 부분 -->
+                    <div class="icon-cell">
+                      <span class="icon-id">
+                        <span class="blind">
+                          아이디
+                        </span>
                       </span>
-                    </span>
+                    </div>
+                    <!-- 아이디 입력 텍스트 필드 -->
+                    <input type="text" class="input-text" maxlength="41" placeholder="아이디" name="id" id="id" />
                   </div>
-                  <!-- 아이디 입력 텍스트 필드 -->
-                  <input type="text" class="input-text" maxlength="41" placeholder="아이디" name="id" id="id" />
-                </div>
-                <!-- 비밀번호 입력을 감싸는 div -->
-                <div class="input-row">
-                  <!-- 비밀번호 아이콘을 표시할 부분 -->
-                  <div class="icon-cell">
-                    <span class="icon-password">
-                      <span class="blind">
-                        비밀번호
+                  <!-- 비밀번호 입력을 감싸는 div -->
+                  <div class="input-row">
+                    <!-- 비밀번호 아이콘을 표시할 부분 -->
+                    <div class="icon-cell">
+                      <span class="icon-password">
+                        <span class="blind">
+                          비밀번호
+                        </span>
                       </span>
-                    </span>
+                    </div>
+                    <!-- 비밀번호 입력 텍스트 필드 -->
+                    <input type="password" class="input-text" maxlength="41" placeholder="비밀번호" name="password"
+                      id="password" />
                   </div>
-                  <!-- 비밀번호 입력 텍스트 필드 -->
-                  <input type="password" class="input-text" maxlength="41" placeholder="비밀번호" name="password"
-                    id="password" />
                 </div>
-              </div>
-              <!-- 로그인 상태 유지 부분 -->
-              <div class="sign-in-keep-wrapper">
-                <div class="keep-check">
-                  <input type="checkbox" class="input-keep" value="off" />
-                  <label class="keep-text">로그인 상태 유지</label>
+                <!-- 로그인 상태 유지 부분 -->
+                <div class="sign-in-keep-wrapper">
+                  <div class="keep-check">
+                    <input type="checkbox" class="input-keep" value="off" />
+                    <label class="keep-text">로그인 상태 유지</label>
+                  </div>
+                  <div class="ip-check"></div>
                 </div>
-                <div class="ip-check"></div>
-              </div>
-              <!-- 로그인 에러 메시지 부분 -->
-              <div id="sign-in-error" class="sign-in-error" style="display: none;">
-                <div class="error-message">
-                  <strong>아이디</strong>를 입력하세요
+                <!-- 로그인 에러 메시지 부분 -->
+                <div id="sign-in-error" class="sign-in-error" style="display: none;">
+                  <div class="error-message">
+                    <strong>아이디</strong>를 입력하세요
+                  </div>
                 </div>
-              </div>
-              <!-- 로그인 버튼 부분 -->
-              <div class="sign-in-button-wrapper">
-                <button type="button" class="sign-in-button">
-                  <span class="button-text">로그인</span>
-                </button>
+                <!-- 로그인 버튼 부분 -->
+                <div class="sign-in-button-wrapper">
+                  <button type="button" class="sign-in-button">
+                    <span class="button-text">로그인</span>
+                  </button>
+                </div>
               </div>
             </li>
           </ul>
