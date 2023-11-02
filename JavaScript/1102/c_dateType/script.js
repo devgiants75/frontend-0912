@@ -71,3 +71,38 @@ let hello;
 console.log(hello); // undefined
 
 //? 자료형 변환
+
+// 문자열로 변환
+// String()함수 | toString()메소드를 사용
+let numberToString = String(123);
+console.log(typeof numberToString);
+
+// 숫자형으로 변환
+// Number()함수 
+// 문자열이 숫자로 변환할 수 없는 경우 > NaN 값을 도출
+// NaN의 특징
+// - 어떤 값과도 동등하지 X
+//   NaN === Nan (X)
+// - 연산에서 전파
+//  : 어떤 수학의 연산도 NaN과 만나면 결괏값이 NaN
+
+let stringToNumber = Number('123');
+console.log(typeof stringToNumber);
+
+let notANumber = Number('This is not a number');
+let nanValue = NaN;
+
+console.log(notANumber);
+console.log(nanValue);
+
+// 불리언으로 변환
+// Boolean() 함수 사용
+
+// JS의 불리언 변환에서
+// : false, 0, '', null, undefined, NaN을 제외한 값은 모두 true로 간주
+
+let stringToBoolean = Boolean('Hello');
+let numberToBoolean = Boolean('');
+
+console.log(stringToBoolean); // true
+console.log(numberToBoolean); // false
