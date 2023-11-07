@@ -293,8 +293,44 @@ if (score >= 50) {
 }
 
 // 위 중첩 if문을 삼항 연산자로 변환
-score = 85;
+score = 150;
 
-let grade = ;
+let grade = 
+  // 100점 초과 0점 미만의 점수는 존재하지 않음.
+  score > 100 || score < 0 ? 'Not existed' :
+  score >= 90 ? 'A' :
+  score >= 80 ? 'B' :
+  score >= 70 ? 'C' :
+  score >= 60 ? 'D' : 'Failed';
 
 console.log(grade);
+
+// 출력값 확인
+true ? alert('출력A') : alert('출력B'); // A
+true ? alert('출력B') : alert('출력A'); // B
+true || console.log('출력A'); // 출력 X
+true && console.log('출력A'); // A
+
+// OR 연산자
+false || false == false;
+false || true == true;
+true || false == true;
+true || true == true;
+
+// AND 연산자
+false && false == false;
+false && true == false;
+true && false == false;
+true && true == true;
+
+// and 연산자는 조건식이 둘 이상일 경우
+// , 하나만 false여도 최종 결괏값이 false
+
+// >> 첫 번째 조건식이 false면, 두 번째 조건식은 체크하지 않고 바로 false
+// and 연산자 사용 시 false가 될 확률이 높은 조건을 첫 번째 조건식으로 사용하는 것을 권장
+
+// or 연산자는 조건식이 둘 이상일 경우
+// , 하나만 true여도 최종 결괏값이 true
+
+// >> true가 될 확률이 높은 조건식을 
+// 첫 번째 조건식으로 사용하는 것을 권장
