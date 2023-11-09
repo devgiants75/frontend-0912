@@ -69,8 +69,11 @@ btn.addEventListener('click', function() {
   // 1부터 사용자가 입력한 숫자(num)까지 반복
   for (let index = 1; index <= num; index++) {
     // 현재 숫자의 제곱근을 계산
-    let sqRoot = Math.sqrt(index); // 현재 숫자의 제곱근을 계산
+    let sqRoot = Math.sqrt(index); 
+    // 현재 숫자의 제곱근을 계산 - 16 
     // 해당 제곱근이 정수가 아닌 경우 반복을 계속
+    // index 8의 제곱근 2.828
+    // index 9의 제곱근 3
     // >> index가 완전제곱수가 아닐 경우 건너뛰기
     if (Math.floor(sqRoot) !== sqRoot) {
       continue;
