@@ -69,3 +69,23 @@ switch (day) {
   default:
     console.log("Invalid day.");
 }
+
+//! 삼항연산자 예제(배경색 변경)
+
+const html = document.querySelector('html');
+const select = document.querySelector('select');
+const div = document.querySelector('div');
+
+document.body.style.padding = '10px';
+div.style.marginTop = '100px';
+
+function update (bgColor, textColor) {
+  html.style.backgroundColor = bgColor;
+  html.style.color = textColor;
+}
+
+select.onchange = function () {
+  select.value === 'black'
+    ? update('black', 'white')
+    : update('white', 'black');
+};
