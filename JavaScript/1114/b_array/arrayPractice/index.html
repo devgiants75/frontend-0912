@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바스크립트 배열 예제</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--  
+    사용자 목록을 보여주는 웹 페이지
+  -->
+  <div id="user-list">
+    <div class="user">
+      <h2>사용자 0</h2>
+      <p>이메일: user0@example.com</p>
+      <p>나이: 25</p>
+    </div>
+  </div>
+  <!-- 
+    검색창: 사용자가 검색 상자에 내용을 입력하고 검색 할 때 마다 최근 검색 용어 목록을 갱신
+    >> 목록은 최대 5개의 이전 검색 용어만 표시
+    >> 새로운 검색이 추가될 때 가장 오래된 검색 용어가 목록에서 제거
+  -->
+  <hr />
+  <div class="search-container">
+    <input 
+      type="text" 
+      id="search-box" 
+      placeholder="검색어를 입력해주세요." 
+    />
+    <button id="search-button">
+      검색
+    </button>
+  </div>
+  <div class="recent-searches">
+    <h3>최근 검색어</h3>
+    <ul id="search-list"></ul>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
