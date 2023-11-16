@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Application Form</title>
+<style>
+  @media print {
+    body {
+      width: 210mm;
+      height: 297mm;
+    }
+    .no-print {
+      display: none;
+    }
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+  }
+  .form-container {
+    width: 794px; /* A4 width */
+    height: 1123px; /* A4 height */
+    margin: 20px auto; /* Added margin here */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: #fff;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Ensure table adheres to the specified width */
+  }
+  th, td {
+    border: 1px solid #000;
+    padding: 5px;
+    vertical-align: top;
+  }
+  th {
+    background-color: #f2f2f2;
+    width: 30%;
+  }
+  td {
+    width: 70%;
+  }
+  textarea {
+    width: 100%; /* Width is now 100% of the td */
+    height: 50px; /* Adjust height as necessary */
+    border: none;
+    padding: 5px;
+    resize: none; /* Disable resizing */
+    margin-bottom: 5px; /* Spacing between textareas */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  .section {
+    background-color: #f2f2f2;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+  }
+</style>
+</head>
+<body>
+<div class="form-container">
+  <h1 class="no-print">자기소개서 준비</h1>
+  
+  <!-- Growth Process Section -->
+  <div class="section">성장과정</div>
+  <table>
+    <tr>
+      <th>본인의 가치관</th>
+      <td><textarea name="values"></textarea></td>
+    </tr>
+    <tr>
+      <th>가치관 계기/영향</th>
+      <td><textarea name="values_impact"></textarea></td>
+    </tr>
+  </table>
+  
+  <!-- Personality Strengths and Weaknesses Section -->
+  <div class="section">성격의 장단점</div>
+  <table>
+    <tr>
+      <th>장점</th>
+      <td><textarea name="strengths"></textarea></td>
+    </tr>
+    <tr>
+      <th>장점을 발휘한 경험</th>
+      <td>
+        <textarea name="strengths_experience" placeholder="당시상황"></textarea>
+        <textarea name="strengths_action" placeholder="나의 행동"></textarea>
+        <textarea name="strengths_result" placeholder="결과"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <th>단점</th>
+      <td><textarea name="weaknesses"></textarea></td>
+    </tr>
+    <tr>
+      <th>극복 방법/일화</th>
+      <td><textarea name="overcoming_weaknesses"></textarea></td>
+    </tr>
+  </table>
+  
+  <!-- Reason for Application Section -->
+  <div class="section">지원동기</div>
+  <table>
+    <tr>
+      <th>이 일을 지원하는 이유</th>
+      <td><textarea name="application_reason"></textarea></td>
+    </tr>
+    <tr>
+      <th>본인이 쌓은 전문성</th>
+      <td><textarea name="expertise"></textarea></td>
+    </tr>
+  </table>
+  
+  <!-- Aspirations after Joining Section -->
+  <div class="section">입사 후 포부</div>
+  <table>
+    <tr>
+      <th>입사후 본인의 목표</th>
+      <td><textarea name="post_joining_goals"></textarea></td>
+    </tr>
+    <tr>
+      <th>역량 스토리</th>
+      <td>
+        <textarea name="capabilities_story" placeholder="역량을 펼친 스토리"></textarea>
+        <textarea name="developer_vision" placeholder="어떤 개발자가 될 것인가"></textarea>
+      </td>
+    </tr>
+  </table>
+  
+</div>
+</body>
+</html>
