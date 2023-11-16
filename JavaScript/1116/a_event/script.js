@@ -51,6 +51,8 @@ btn.onmouseout = function() {
 // >> 위의 이벤트 핸들러는 video와 같은 특정한 요소에서만 사용 가능
 
 //? 2. 인라인 이벤트 핸들러
+// : 사용하지 않는 것을 권장
+// : 코드를 파싱(분석)하기가 어려워지고 유지보수에 어려움이 있음.
 function bgChange() {
 
   // 임의의 정수를 생성하는 함수
@@ -66,3 +68,40 @@ function bgChange() {
 
   document.body.style.backgroundColor = rndColor;
 }
+
+// 여러 개의 버튼의 참조를 모두 가져와 한 번에 이벤트 핸들러를 추가
+const buttons = document.querySelectorAll('button');
+
+// for (let i = 0; i < buttons.length; i++) {
+//   buttons[i].onclick = bgChange;
+// }
+
+buttons.forEach(function(button) {
+  button.onclick = bgChange;
+})
+
+//? 3. addEventListener 메서드
+// : 표준 이벤트 모델
+// : HTML요소의 addEventListener 메서드를 사용하여 이벤트 핸들러를 등록하는 방법
+// : 한 요소에 여러 개의 이벤트 핸들러 등록 가능
+
+// function random(number) {
+//   return Math.floor(Math.random() * (number + 1));
+// }
+
+btn.addEventListener('click', () => {
+  const rndColor =
+    'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  
+    document.body.style.backgroundColor = rndColor;
+})
+
+// addEventListener 메서드는 요소에 이벤트 리스너를 '추가'
+
+// addEventListener() 함수의 두 가지 매개변수
+// 첫 번째 매개변수: 이벤트 유형(등록하고자 하는 이벤트의 이름 / 예 - click, load, input 등)
+// 두 번째 매개변수: 이벤트 핸들러 함수
+
+//? 4. removeEventListener 메서드
+// : 이벤트 핸들러를 제거하는 메서드
+btn.removeEventListener('click', bgChange);
