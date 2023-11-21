@@ -91,12 +91,88 @@ let objectName = {
 
 console.log(person.age); // 속성
 console.log(person.interests[1]); // 배열의 일부
-console.log(person.bio()); // 메소드
+// console.log(person.bio()); // 메소드
 
 // 하위 namespaces
 // : 다른 객체를 객체의 멤버값으로 갖는 것
 console.log(person.name.last);
 console.log(person.name.first);
 
-console.log(person.greeting());
+// console.log(person.greeting());
+
+//! 5. 괄호 표기법
+// 객체의 프로퍼티에 접근하는 방법
+// : 배열의 요소값에 접근하는 것과 동일하게
+// : , 인덱스 숫자를 대신하여 각 멤버의 값들과 연결된 이름을 이용하여 접근
+// : 객체를 '연관배열'이라고도 불림.
+
+// 객체명['프로퍼티명']
+console.log(person['age']);
+console.log(person['name']['first']);
+
+//! 6. 객체 멤버 설정
+// : 객체 멤버 가져오기(반환)방법과 동일하게
+// : , 점 표기법과 대괄호 표기법을 사용
+console.log(person.age);
+console.log(person['name']['first']);
+person.age = 45;
+person['name']['first'] = 'junGook';
+
+console.log(person.age); // 45
+console.log(person['name']['first']); // junGook
+
+// 객체 멤버를 설정하는 것은
+// 기존의 존재하는 프로퍼티나 메소드를 새롭게 정의하는 것 뿐만이 아니라
+// , 완전히 새로운 멤버 생성도 가능
+person['job'] = 'developer';
+person.work = function() {
+  console.log('work hard!');
+};
+
+console.log(person['job']);
+person.work();
+
+function addProperty() {
+  // 사용자 입력을 변수에 저장
+  let myDataName = document.getElementById('propertyName').value;
+  let myDataValue = document.getElementById('propertyValue').value;
+
+  // 객체 속성에 추가
+  person[myDataName] = myDataValue;
+
+  // 결과 출력
+  console.log('Property added', myDataName, '=', person[myDataName]);
+}
+// 대괄호 표기법을 사용하여 멤버의 이름을 동적으로 사용 가능하며 변수값 또한 사용 가능
+
+// >> 점 표기법: 멤버의 이름을 동적으로 사용X, 상수값만을 사용하는 것을 권장
+
+//! 'this'
+// : 지금 동작하고 있는 코드를 가지고 있는 객체를 가리킴
+
+// greeting: function() {
+//   alert("Hi I'm " + this.name.last + ".");
+// }
+
+// 위의 예제에서는 this가 person 객체를 가리킴.
+
+// 두개의 다른 person 객체가 각각 다른 이름으로 생성될 경우, 호출 시의 해당 객체를 가리킬 때 사용
+
+let person1 = {
+  name: 'SeungAh',
+  greeting: function() {
+    console.log(this.name);
+  }
+}
+
+let person2 = {
+  name: 'JunGook',
+  greeting: function() {
+    console.log(this.name);
+  }
+}
+
+// this는 실행중인 코드가 속해있는 객체
+person1.greeting();
+person2.greeting();
 
