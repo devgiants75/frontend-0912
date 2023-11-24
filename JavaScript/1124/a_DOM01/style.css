@@ -1,0 +1,9 @@
+p {
+  /* 
+    CSS의 경우 속성명 작성 시
+    : 단어와 단어 사이를 하이픈(-)으로 구분
+  */
+  background-color: pink;
+  text-align: center;
+  font-size: 20px;
+}
