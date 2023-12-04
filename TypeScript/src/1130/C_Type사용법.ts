@@ -42,19 +42,45 @@ const user: UserType = {
 // user.name = '이도경'; - Error
 
 //^ 함수 타입 별칭
+
+// ValidateUser의 매개변수인 user의 타입을 지정
 type User = {
   id: string;
   name: string;
 }
 
+// 함수 타입 별칭
+// User 타입인 매개변수를 받아 boolean 타입의 반환값을 생성하는 함수
 type ValidateUser = (user: User) => boolean;
 
-let userId: User = {
-  id: 'user-123',
+// 사용자가 입력되었을 때
+// 사용자의 아이디가 null인 경우(입력하지 않은 경우) false
+// 사용자의 아이디를 입력하였다면 true
+const isValidUser: ValidateUser = (user) => user.id !== '';
+
+let userAlias: User = {
+  id: 'qwerty',
   name: '이승아'
 };
 
-const isValidUser: ValidateUser = (user) => user.id !== null;
 // 함수 사용
-console.log(isValidUser(userId));
+console.log(isValidUser(userAlias));
+
+// >> 함수 타입 별칭 예제
+// 함수 타입 별칭 정의
+type GreetFunction = (name: string) => string;
+
+// 위의 타입 별칭을 사용하는 함수 구현
+const greet: GreetFunction = (name) => {
+  return `Hello, ${name}`;
+}
+
+// 다른 함수에서 동일한 타입 별칭 사용
+const farewell: GreetFunction = (n) => {
+  return `Goodbye, ${n}`;
+}
+
+// 함수 사용
+console.log(greet('이승아'));
+console.log(farewell('이도경'));
 }
