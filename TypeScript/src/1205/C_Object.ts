@@ -91,4 +91,32 @@ function isAddress(user: UserProfile) {
   }
 }
 isAddress(userA);
+
+//! 4. 인덱스 서명
+// : 객체의 모든 속성에 대해 타입을 정의하지 않고
+// : , 키와 값의 타입만을 정의하여 객체의 구조를 유연하게 지정하는 방법
+// : 객체의 속성에 동적으로 접근할 수 있는 기능
+
+// 장점
+// - 유연성: 정해진 속성 이름 없이 다양한 속성을 객체에 추가 가능
+// - 동적 데이터 처리: 런타임에 키와 값을 결정 가능
+
+// 사용법
+// : 객체의 타입 정의 시 대괄호[]를 사용하여 선언
+
+type UserRecord = {
+  // [propertyName: indexType]: valueType;
+  // 문자열 키를 가지며, 각 키의 값도 문자열 타입으로 지정되어야 한다.
+  [key: string]: string;
+  // [key: number]: string;
+}
+let users: UserRecord = {
+  name: 'lsa',
+  age: '20',
+  true: 'true'
+  // 추가적인 사용자 속성을 지정 가능
+}
+
+users['firstName'] = 'Lee';
+console.log(users.firstName);
 }
