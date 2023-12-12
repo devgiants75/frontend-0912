@@ -43,4 +43,33 @@ fetchData()
   .then(data => console.log('사용자 데이터:', data))
   .catch(error => console.error('오류:', error));
 
+// 실제 비즈니스 요구에 대한 비동기 처리 코드
+// : 게시물을 페이지별로 불러오기
+
+// 페이지 번호와 페이지당 게시물의 수를 인자로 받는 비동기 함수 정의
+// : 기본으로 한 페이지당 게시물의 수는 10으로 설정
+async function fetchPostsByPage(page: number, limit: number = 10): Promise<any[]> {
+  try {
+    // 요청 전달
+    const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=${limit}`)
+
+    // 응답 상태가 'ok'가 아닐 경우 - 에러
+    if(!response.ok) {
+      throw new Error('데이터 요청 실패');
+    }
+
+    // 응답 데이터를 JSON 형태로 변환하여 반환
+    return await response.json();
+
+
+  } catch(error) {
+    console.error('오류: ', error);
+    return [];
+  }
+}
+
+// 함수 호출
+// then을 사용하여 비동기 작어비 완료된 후에 게시물을 콘솔에 출력
+fetchPostsByPage(1, 5).then(posts => console.log('페이지 1의 게시물: ', posts));
+
 } // 닫히는 중괄호
