@@ -3,13 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    {/* 라우터 적용을 위한 컴포넌트 */}
+    <BrowserRouter>
+      {/* 화면에 렌더링되는 UI 전체 */}
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 

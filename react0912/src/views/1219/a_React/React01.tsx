@@ -42,7 +42,7 @@
 - 최소 업데이트: 계산된 차이 만큼 실제 DOM을 업데이트
 */
 
-export default function React() {
+export default function React01() {
   return (
     <div>React</div>
   )
