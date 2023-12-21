@@ -24,7 +24,19 @@ export default function JSX02() {
     age: 29
   }
 
-  //?
+  //? 중괄호를 사용한 속성 지정
+  // : JSX에서 문자열, 숫자, 기타 JS 표현식 뿐만아니라 객체까지도 모두 중괄호 내에 작성
+
+  // style 속성 지정 시 - 객체 형식으로 작성
+  // 더블 컬리 {{}} 사용
+  // : JSX에서 JS 객체를 전달 할 때에는 객체를 중괄호 쌍으로 감싸야 함.
+  const divStyle = {
+    backgroundColor: 'black',
+    color: 'white',
+    fontSize: 24,
+    padding: '10px'
+  }
+  const text = "스타일 속성 사용하기";
 
   return (
     <>
@@ -33,6 +45,12 @@ export default function JSX02() {
       <div>
         이름: {userInfo.name}, 나이: {userInfo.age}
       </div>
+      {/* 속성에서 중괄호 사용 */}
+      <div style={divStyle}>{text}</div>
     </>
   )
 }
+
+// JSX 내에서 주석 사용 시
+// JS 문법 영역에서는 // JS 주석 사용
+// ()소괄호 내에서는 {/* */} HTML 주석 사용

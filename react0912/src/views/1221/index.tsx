@@ -1,6 +1,7 @@
 import React from 'react'
 import JSX01 from './a_JSX/JSX01'
 import JSX02 from './a_JSX/JSX02'
+import Props01 from './b_Props/Props01'
 
 export default function Index() {
   return (
@@ -11,6 +12,7 @@ export default function Index() {
       <JSX02 />
 
       <h2>2. Props</h2>
+      <Props01 />
 
       <h2>3. 조건부 렌더링</h2>
 
