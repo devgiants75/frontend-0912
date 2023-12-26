@@ -1,0 +1,84 @@
+/* 기본 웹 페이지 설정 */
+/* 전체 마진 0 설정 */
+body {
+  margin: 0;
+}
+
+/* 상단 header */
+header {
+  background-color: rgb(0, 79, 52);
+  height: 100px;
+}
+
+h1 {
+  /* 내용 가로 정렬 */
+  text-align: center; 
+  /* 내용 세로 정렬 - 컨테이너 요소와 높이를 동일하게 지정 */
+  line-height: 100px;
+  color: white;
+  margin: 0;
+}
+
+/* section을 플렉스 박스 컨테이너 지정 */
+section {
+  display: flex;
+}
+
+/* 메인 article - 플렉스 아이템 */
+article {
+  /* 패딩, 마진 10px */
+  padding: 10px;
+  margin: 10px;
+  background-color: bisque;
+  /* flex: flex-grow 1, flex-basis 200px */
+  /* 
+    flex-grow
+    : 단위없는 비례값
+    : aricle에 여유 공간이 있을 경우 그 공간을 1의 비율로 채움.
+    flex-basis
+    : 최소 크기 값
+  */
+  flex: 1 200px;
+}
+
+
+/* 
+  3번째 article
+  flex-grow 3, 기본크기 200px 
+*/
+#last-article {
+  /* 
+    3번째 article이 다른 article에 비해 3배 더 많은 여유 공간을 차지 
+  */
+  flex: 3 200px;
+  /* 
+    해당 article 내부를 플렉스 컨테이너로 지정
+    내부 요소의 정렬 방향: column(세로, 열)
+   */
+  display: flex;
+  flex-flow: column;
+}
+
+/* 3번째 article의 첫 번째 div 스타일 */
+#first-div {
+  flex: 1 100px;
+  /* 
+    해당 div 내부를 플렉스 컨테이너 지정
+    flex-flow: row(수평 방향 배열) wrap(공간이 부족할 경우 다음 행으로 감싸져서 내려오게 하는 속성)
+   */
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  /* div 내 플렉스 아이템들 사이에 균일한 공간 배분 */
+  justify-content: space-around;
+}
+
+/* 버튼의 기본 플렉스 값 지정 */
+button {
+  /* 브라우저 창의 폭 조절 시 최대한 공간을 점유(full-width 효과)
+    , 동일 선상에 가능한 한 많은 요소를 배치 */
+  flex: 1 auto;
+  margin: 5px;
+  font-size: 18px;
+  line-height: 1.5;
+}

@@ -1,0 +1,11 @@
+/* 마진 중첩 현상 */
+#collapse {
+  width: 200px;
+  height: 100px;
+  margin: 30px;
+}
+
+img {
+  width: 200px;
+  height: 100px;
+}

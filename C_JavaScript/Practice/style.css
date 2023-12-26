@@ -1,0 +1,16 @@
+#slider {
+  display: flex;
+  align-items: center;
+}
+
+#slide-container {
+  display: flex;
+  overflow: hidden;
+  width: 300px;
+  height: 200px;
+}
+
+.slide {
+  min-width: 100%;
+  height: auto;
+}

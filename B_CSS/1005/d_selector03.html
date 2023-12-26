@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가상 클래스와 가상 요소</title>
+  <link rel="stylesheet" href="styles/d_selector03.css">
+</head>
+<body>
+  <!--  
+    가상 클래스 & 가상 요소
+    : 특별한 상황 또는 상태에서 요소를 스타일링
+    
+    - 가상 클래스: 요소의 특정 상태를 선택
+    - 가상 요소: 실제 요소와는 별개로 페이지의 특정 부분을 선택
+
+    !1) 가상 클래스 선택자
+    ?: 사용자의 동작에 반응
+    : 적용 순서(:link > :visited > :hover > :active > :focus)
+
+    - :hover
+    - 요소에 마우스를 올렸을 때 선택
+      : 웹 요소에 마우스 커서를 올려놓았을 때의 스타일을 적용
+
+    - :active
+    - 요소가 활성화되어 있을 때 선택
+      : 웹 요소를 활성화 했을 때의 스타일을 적용
+
+    - :focus 
+    - 요소가 포커스 되었을 때를 선택
+      : 웹 요소에 초점이 맞추어졌을 때의 스타일을 적용
+
+    - :visited
+    - 방문한 링크를 선택
+
+    - :link
+    - 방문하지 않은 링크에 스타일을 적용
+  -->
+
+  <nav class="navi">
+    <ul>
+      <li><a href="#">이용 안내</a></li>
+      <li><a href="#">객실 소개</a></li>
+      <li><a href="#">예약 방법 및 요금</a></li>
+      <li><a href="#">예약하기</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>텍스트 기타 속성</title>
+  <link rel="stylesheet" href="styles/d_text.css">
+</head>
+<body>
+  <!--  
+    ! 1. text-decoration 속성
+      : 텍스트이 줄을 표시 | 제거
+      : 하이퍼링크를 적용할 때 기본적으로 생기는 밑줄을 제거
+      속성값
+      ? none
+      ? underline
+      ? overline
+      ? line-through
+
+    ! 2. text-shadow 속성
+      : 텍스트에 그림자 효과를 추가
+      : 사이트 제목처럼 강조해야 할 글자에 사용
+      속성값
+      ? 가로거리
+        : 필수 속성, 양숫값: 글자의 오른쪽, 음숫값: 글자의 왼쪽 생성
+      ? 세로거리
+        : 필수 속성, 양숫값: 글자의 아래쪽, 음숫값: 글자의 위쪽 생성 
+      ? 번짐정도
+        : 양숫값 - 모든 방향으로 퍼져나감(크게 표시)
+        : 음숫값 - 그림자가 모든 방향으로 축소되어 표시
+        : 기본값 - 0
+      ? 색상
+        : 한 가지 | 공백을 두고 여러 색상 지정 가능
+        : 기본값 - 현재 글자색
+
+    ! 3. text-transform 속성
+      : 영문자 표기 시 텍스트의 대소 문자 변경
+      : 한글 X (영문자만 적용, 기타 외국어 가능)
+      속성값
+      ? none : 기본값 (변환X)
+      ? capitalize: 첫 번째 글자를 대문자로 변환
+        Hello
+      ? uppercase: 모든 글자를 대문자로 변환
+      ? lowercase: 모든 글자를 소문자로 변환
+      ? full-width: 가능한 한 모든 문자를 전각 문자로 변환
+        전각 문자: 가로와 세로의 길이 비율이 같은 글자
+    
+    ! 4. letter-spacing, word-spacing
+      : 글자 간격을 조정
+      ? letter-spacing(글자와 글자 사이 간격)
+      ? word-spacing(단어와 단어 사이 간격)
+      > 음숫값 사용 시 간격 축소
+
+    ! 5. text-indent
+      : 텍스트 들여쓰기
+      속성값
+      ? 픽셀(px), 백분율
+
+    ! 6. white-space
+      : 공백 처리
+      속성값
+      ? normal(기본값)
+      ? nowrap
+        : 영역 너비를 넘어가는 줄을 바꾸지 않고 계속 한 줄로 표시
+
+    ! 7. text-overflow
+      : 넘치는 텍스트 표기하기
+      : white-space속성이 nowrap이고
+        overflow 속성이 hidden, scroll, auto일 때만 적용
+      속성값
+      ? clip: 넘치는 텍스트를 자름.
+      ? ellipsis: 말 줄임표(...)로 잘린 텍스트가 있다고 표시
+
+      ! overflow 속성
+        : 요소의 크기(너비, 높이) 내에서 콘텐츠가 너무 많아서
+          넘쳤을 때 어떻게 처리할지를 지정
+        속성값
+        ? visible(기본값)
+        ? hidden: 오버플로우된 콘텐츠가 잘림. (스크롤바 제공 X)
+        ? scroll: 스크롤 바가 항상 표시
+        ?         실제로 콘텐츠가 넘치지 않더라도 표시
+        ? auto: 콘텐츠가 넘칠 경우에만 스크롤바가 표시 
+  -->
+  <h2>Text Decoration</h2>
+  <a href="#">Text Decoration - none</a>
+  <p class="underline">Text Decoration - underline</p>
+  <p class="overline">Text Decoration - overline</p>
+  <p class="line-through">Text Decoration - line-through</p>
+
+  <h2>Text Shadow</h2>
+  <p class="shadow-basic">Text Shadow 1</p>
+  <p class="shadow-reverse">Text Shadow 2</p>
+  <button>Text Shadow 3</button>
+
+  <h2>Text Transform</h2>
+  <p class="capitalize">hello my name is Lee Seung Ah</p>
+  <p class="uppercase">hello my name is Lee Seung Ah</p>
+  <p class="lowercase">hello my name is Lee Seung Ah</p>
+
+  <h2>Spacing</h2>
+  <p class="letter-spacing">
+    Hello my name is Lee Seung Ah
+  </p>
+  <p class="word-spacing">
+    Hello my name is Lee Seung Ah
+  </p>
+
+  <h2>Text Overflow</h2>
+  <p class="overflow">
+    Hello my name is Lee Seung Ah. 
+    Hello my name is Lee Seung Ah. 
+    Hello my name is Lee Seung Ah. 
+    Hello my name is Lee Seung Ah.
+  </p>
+</body>
+</html>

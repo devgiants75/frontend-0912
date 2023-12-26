@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML input태그의 주요 속성</title>
+</head>
+<body>
+  <h2>inputArributes</h2>
+  <!--  
+    input 태그의 주요 속성
+
+    1. autofocus 속성
+    : 페이지를 불러오자마자 폼에서 원하는 요소에
+    자동으로 입력 커서(마우스 포인터)를 가져다 놓는 속성
+
+    2. placeholder 속성
+    : 힌트를 표시해주는 속성
+    - 사용자가 텍스트를 입력할 때 입력란에 적당한 힌트 내용을 표시
+    - 해당 필드를 클릭 시 내용이 사라짐
+
+    3. readonly 속성
+    : 읽기 전용 필드를 만들어 주는 속성
+    - 사용자 입력 X (읽기만 가능)
+
+    4. required 속성
+    : 필수 입력 필드를 지정하는 속성
+    - 내용을 폼에 입력한 후 submit 버튼 클릭 시 
+      필수 필드에 필요한 내용이 모두 채워졌는지 검사
+
+    5. name 속성
+    : 각 입력 필드를 송신하는 속성
+    - name 속성을 생략할 경우 입력 필드의 값이 전송되지 X
+  -->
+  <form action="">
+    <label for="id">아이디</label>
+    <input type="text" id="id" placeholder="아이디를 입력하세요." autofocus required />
+    <br />
+
+    <label for="password">비밀번호</label>
+    <input type="password" id="password" placeholder="비밀번호를 입력하세요." required />
+    <br />
+
+    <label for="email">이메일</label>
+    <input type="email" id="email" value="devgiants75@naver.com" readonly />
+    <br />
+
+    <input type="submit" />
+  </form>
+</body>
+</html>

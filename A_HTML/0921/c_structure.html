@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웹 페이지 구조 연습</title>
+</head>
+<body>
+  <!--  
+    header
+
+    nav(순서가 없는 리스트 - 텍스트링크)
+    - href="#"
+
+    main
+    - article
+    - aside(이미지는 이미지링크)
+    - 이미지 크기 width: 50px
+
+    footer
+    &copy;
+  -->
+  <header>
+    <h1>Header</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Our team</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <form>
+      <input type="search" name="q" placeholder="Search query" />
+      <input type="submit" value="Go!" />
+    </form>
+  </nav>
+
+  <main>
+    <article>
+      <h2>Article heading</h2>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
+        lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam
+        viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent
+        et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt
+        congue enim, ut porta lorem lacinia consectetur.
+      </p>
+
+      <h3>Subsection</h3>
+
+      <p>
+        Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum
+        dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem.
+        Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.
+      </p>
+
+      <p>
+        Pelientesque auctor nisi id magna consequat sagittis. Curabitur
+        dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet.
+        Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.
+      </p>
+
+      <h3>Another subsection</h3>
+
+      <p>
+        Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
+        soclis natoque penatibus et manis dis parturient montes, nascetur
+        ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem
+        facilisis semper ac in est.
+      </p>
+
+      <p>
+        Vivamus fermentum semper porta. Nunc diam velit, adipscing ut
+        tristique vitae sagittis vel odio. Maecenas convallis ullamcorper
+        ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi
+        diam iaculis velit, is fringille sem nunc vet mi.
+      </p>
+    </article>
+
+    <aside>
+      <h2>Related</h2>
+
+      <a href="#"><img src="../../Images/KakaoTalk_20230405_200037041.jpg"
+          alt="Book cover of bestselling novel, links to larger version of the image" width="50"></a>
+
+      <a href="#"><img src="../../Images/KakaoTalk_20230405_200037041_01.jpg"
+          alt="Book cover of popular non-fiction, links to larger version of the image" width="50"></a>
+
+      <a href="#"><img src="../../Images/KakaoTalk_20230405_200037041_02.jpg"
+          alt="Book cover of acclaimed poetry collection, links to larger version of the image" width="50"></a>
+
+      <a href="#"><img src="../../Images/KakaoTalk_20230405_200037041_03.jpg"
+          alt="Book cover of famous historical fiction, links to larger version of the image" width="50"></a>
+    </aside>
+  </main>
+
+  <footer>
+    <p>©Copyright 2050 by nobody. All rights reversed.</p>
+  </footer>
+</body>
+</html>

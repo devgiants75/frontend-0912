@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바스크립트 이벤트</title>
+  <style>
+    button {
+      margin: 5px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- HTML 이벤트 핸들러 프로퍼티 -->
+  <button>Change Color</button>
+  
+  <hr />
+
+  <!-- 인라인 이벤트 핸들러 -->
+  <button onclick="bgChange()">Click Me</button>
+  <!-- Press Me 버튼을 클릭하면 alert창에 Hello라는 메시지가 출력 -->
+  <button onclick="alert('Hello');">Press Me</button>
+
+  <hr />
+  <button>1</button>
+  <button>2</button>
+  <button>3</button>
+
+  <hr />
+  <!-- 3. addEventListener 메서드 사용 -->
+  <button>Change Color</button>
+  
+  <script src="script.js"></script>
+</body>
+</html>

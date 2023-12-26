@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML 복습</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--  
+    header, main(section), ul, ol, 
+    form, fieldset, legend, label, 
+    input(placeholder, required 속성), textarea 등 활용
+  -->
+  <header>
+    <h1>About Me</h1>
+  </header>
+
+  <main>
+    <section>
+      <img src="../../images/lotte.jpeg" alt="Profile Picture" width="200px">
+      <h2>Lee Seung Ah</h2>
+      <p>Email: <a href="mailto:devgiants75@naver.com">devgiants75@naver.com</a></p>
+    </section>
+    <section>
+      <h2>Education & Work Experience</h2>
+      <ul>
+        <li>
+          MSc in Computer Science, XYZ University, 2018-2020
+        </li>
+        <li>
+          Software Developer, ABC Corp, 2020-present
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>Certifications & Awards</h2>
+      <ol type="A">
+        <li>
+          Certified Python Developer, 2019
+        </li>
+        <li>
+          Best Employee of the Year, ABC Corp, 2021
+        </li>
+      </ol>
+    </section>
+    <section>
+      <h2>Contact Form</h2>
+      <form>
+        <fieldset>
+          <legend>Your Information</legend>
+
+          <label for="name">Name: </label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required /> <br />
+
+          <label for="email">Email: </label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required /> <br />
+
+          <label for="message">Message: </label>
+          <textarea id="message" name="message" placeholder="Enter your message" required ></textarea> <br />
+
+          <input type="submit" value="Submit" />
+        </fieldset>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

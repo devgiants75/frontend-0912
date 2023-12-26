@@ -1,0 +1,19 @@
+#app {
+  width: 300px;
+  background-color: #777;
+  text-align: center;
+  padding: 20px;
+}
+
+#inputField {
+  padding: 10px;
+}
+
+#add-btn {
+  padding: 10px;
+}
+
+#itemList li {
+  margin: 5px 0;
+  cursor: pointer;
+}

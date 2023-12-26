@@ -1,0 +1,23 @@
+caption {
+  caption-side: bottom;
+}
+
+table {
+  border: 1px dashed tomato;
+  /* 
+  border-spacing: 10px 20px; 
+  */
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 2px double black;
+}
+
+/* 표준 테이블 속성 */
+/* 
+table, td, th {
+  border: 1px solid black;
+  border-collapse: collapse;
+} 
+*/

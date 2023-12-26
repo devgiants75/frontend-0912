@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>submit & reset</title>
+</head>
+<body>
+  <!-- 
+    !submit(전송 버튼)
+    : submit 버튼으로 전송된 정보는 
+      form 태그의 action 속성에서 지정한 폼 처리 프로그램으로 처리
+
+    reset(리셋 버튼)
+    : input 요소에 입력된 모든 정보를 재설정
+    
+    - value 속성을 사용해서 버튼에 표시할 내용을 지정
+    : 해당 속성을 사용하지 않을 경우 
+      기본값: submit(제출), reset(초기화)
+  -->
+
+  <h2>롯데 자이언츠 유니폼 주문하기</h2>
+  <form action="">
+
+    <ul>
+      <li>
+        <label for="name">이름</label>
+        <input type="text" id="name" />
+      </li>
+      <li>
+        <label for="email">이메일</label>
+        <input type="email" id="email" />
+      </li>
+      <li>
+        <label for="phone">연락처</label>
+        <input type="tel" id="phone" />
+      </li>
+    </ul>
+    <input type="submit" value="주문하기" />
+    <input type="reset" value="취소하기" />
+  </form>
+
+</body>
+</html>

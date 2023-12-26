@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바스크립트 조건문</title>
+</head>
+<body>
+  <!--  
+    JS 파일을 HTML 문서의 제일 아래
+    즉, 닫히는 body태그 바로 앞에 위치
+    : HTML 문서를 위에서 아래로 순차적으로 파싱하고 렌더링할 때 JS 파일이 head 태그 안에 위치할 경우, HTML 파싱을 중단
+
+    파싱(parsing)
+    : HTML, CSS, JS 등의 코드를 브라우저가 해당 언어의 문법에 따라 코드를 읽고 실행 가능한 형태로 변환하는 과정을 의미
+  -->
+
+  <label for="weather">
+    Select the weather type today:
+  </label>
+  <select id="weather">
+    <option value="">--Make a choice--</option>
+    <option value="sunny">Sunny</option>
+    <option value="rainy">Rainy</option>
+    <option value="snowing">Snowing</option>
+    <option value="overcast">Overcast</option>
+  </select>
+
+  <hr />
+  <p></p>
+
+  <script src="script.js"></script>
+</body>
+</html>

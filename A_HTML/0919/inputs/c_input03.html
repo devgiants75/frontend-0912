@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>checkbox & radio</title>
+</head>
+<body>
+  <!-- 
+    여러 항목 중에서 원하는 항목을 선택할 때 사용하는 폼 요소
+    !checkbox
+    : 2개 이상 선택 가능
+
+    !radio
+    : 1개만 선택 가능
+    - 이미 선택한 항목이 있을 경우 다른 항목을 선택하면 
+      기존 항목이 취소
+
+    ?체크 박스, 라디오 버튼에서 사용하는 속성
+    value: 선택한 체크 박스나 라디오 버튼을 서버에게 알려 줄 때 넘겨줄 값을 지정
+    - 영문 or 숫자 (필수 속성)
+
+    checked: 여러 항목 중에서 기본으로 선택해 놓고 싶은 항목을 지정
+    - 속성값 없이 키워드 입력만으로도 기능 사용 가능
+
+    name: 라디오 버튼, 체크 박스가 여러 개 있는 경우
+      서버의 폼 프로그램에서 구분을 하기 위해 이름을 지정
+    
+    - radio버튼은 여러 개 중에서 한 가지만 선택!
+      관련 있는 그룹끼리는 같은 name 속성값을 지정해야 한다.
+      (지정하지 않을 경우 서로 다른 radio 투표로 인식해 중복 선택이 가능)
+      !radio 버튼 사용 시 필수 사항
+  -->
+  <form>
+    <!-- 2개 이상의 입력값을 받는 질문 -->
+    <p><b>2023 프로야구 포스트시즌 진출팀을 예측해주세요.</b></p>
+    <ul>
+      <li>
+        <label for="lotte">
+          <input type="checkbox" value="Giants" id="lotte" checked />
+          롯데 자이언츠
+        </label>
+      </li>
+      <li>
+        <label for="dosan">
+          <input type="checkbox" value="Bears" id="dosan" />
+          두산 베어스
+        </label>
+      </li>
+      <li>
+        <label for="lg">
+          <input type="checkbox" value="Twins" id="lg" />
+          LG 트윈스
+        </label>
+      </li>
+      <li>
+        <label for="kiwoom">
+          <input type="checkbox" value="Heros" id="kiwoom" />
+          키움 히어로즈
+        </label>
+      </li>
+    </ul>
+
+    <!-- 1개의 입력값을 받는 질문 -->
+    <p><b>2023 프로야구 포스트시즌 진출팀 예측 이벤트 결과 문자 수신동의.</b></p>
+    <ul>
+      <li>
+        <label for="agree">
+          <input type="radio" name="event" value="yes" checked />
+          동의함
+        </label>
+      </li>
+      <li>
+        <label for="disagree">
+          <input type="radio" name="event" value="no" />
+          동의 안 함
+        </label>
+      </li>
+    </ul>
+  </form>
+</body>
+</html>

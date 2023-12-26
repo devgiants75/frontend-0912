@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Layout - Grid</title>
+  <link rel="stylesheet" href="styles/b_grid02.css">
+</head>
+<body>
+  <!--  
+    CSS Writing Modes: 왼쪽 > 오른쪽
+
+  ! CSS Item 속성
+    : 시작 라인과 끝 라인을 지정하여 각각의 라인에 따라 사물을 정렬
+    속성
+      : 라인 번호를 값으로 사용
+    grid-column-start
+    grid-column-end
+    grid-row-start
+    grid-row-end
+    >> grid-column
+      : 아이템이 그리드의 어느 열에서 시작하고 끝날 것인지 지정
+      속성값
+        ? 숫자(그리드 라인 번호)
+
+    >> grid-row
+      : 아이템이 그리드의 어느 행에서 시작하고 끝날 것인지 지정
+      속성값
+        ? 숫자(그리드 라인 번호)
+    : 약칭으로 속성 사용 시
+      /(슬래시)로 구분하여 한 번에 지정
+
+      속성값 지정 시 
+        : 마지막 열 | 행 라인을 -1 값으로 지정 가능 
+
+    ! grid-template-areas: 위치 잡기
+      : 디자인의 다양한 요소에 이름을 지정
+      : 특징
+        - 그리드로 이루어진 전체 셀을 채워야 한다.
+        - 두 개의 셀을 함치려면 해당 이름을 반복
+        - 셀을 비우려면 .(마침표)를 사용
+        - 영역은 다른 위치에서 반복 X
+        - 영역은 반드시 직사각형 구조(L자 모양 면적 사용 X)
+    
+  ! CSS 그리드의 그리드 프레임워크
+    : 그리드는 주로 12열 또는 16열의 그리드를 기반으로 사용
+  -->
+  <div class="container">
+    <header>This is my blog.</header>
+    <article>
+      <h1>My article</h1>
+      <p>
+        This article is chapter 01.
+        <br />
+        It refers to a player who plays the role of throwing a ball to a batter in a baseball game. The team in charge of defense plays with the catcher (catcher) who receives the pitcher's ball.
+      </p>
+
+      <p>
+        This article is chapter 02.
+        <br />
+        In baseball games, he is a fielder located behind the home plate. He catches the pitches thrown by his team's pitcher and protects the home plate.
+      </p>
+    </article>
+    <aside>
+      <p>This is an aside
+        <br />
+        Shortstop should have excellent quickness and excellent throwing ability. And place a player with a wide range of
+        defense and excellent sense in the shortstop position.
+      </p>
+    </aside>
+    <footer>Contact me: devgiants75@naver.com</footer>
+  </div>
+</body>
+</html>

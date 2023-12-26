@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Background</title>
+  <link rel="stylesheet" href="styles/c_background.css">
+</head>
+<body>
+  <!--  
+    ! 배경색과 배경 범위 지정
+      웹 문서 전체 배경, 텍스트, 목록 등 특정한 요소에도 배경 지정 가능
+    
+    ! background-color속성
+      : 웹 문서의 요소에 배경색 지정
+      : background-color는 상속 X
+        웹 문서의 요소는 기본적으로 투명 
+        - body 요소에서 스타일 지정 시 문서 배경이 그대로 비춰지기 때문에
+          상속이 된 것 처럼 보인다.
+      속성값
+      ? 16진수 | rgb값 | 색상 이름 등 
+    
+    ! background-clip 속성
+      : 배경을 어디까지 적용할지 지정
+      속성값
+      ? border-box: 박스 모델의 가장 외곽인 테두리까지 적용(기본값)
+      ? padding-box: 박스 모델에서 테두리를 뺀 패딩 범위까지 적용
+      ? content-box: 박스 모델에서 내용(콘텐츠) 부분에만 적용
+
+    ! background-image 속성
+      : 배경 이미지 파일 경로 지정
+      : 이미지 파일: *.jpg, *.gif, *png 형식 사용
+      : 요소보다 이미지 크기가 작을 경우
+        이미지가 가로와 세로로 반복되면서 배경을 채움
+      속성값
+      ? url(파일 경로)
+
+    ! background-repeat 속성
+      : 배경 이미지의 반복 방법을 지정
+      속성값
+      ? no-repeat: 한 번만 표시하고 반복 X
+      ? repeat: 브라우저 화면에 가득 찰때까지 가로와 세로로 반복
+        (기본값)
+      ? repeat-x: 브라우저 화면에 가득 찰 때까지 가로로 반복
+      ? repeat-y: 브라우저 화면에 가득 찰 때까지 세로로 반복
+
+    ! background-position 속성
+      : 배경 이미지를 반복하지 않을 경우, 배경 이미지를 표시할 위치 지정
+      속성값
+      ? 수평위치: left | center | right | 백분율 | 길이 값
+      ? 수직위치: top | center | bottom | 백분율 | 길이 값
+        : 속성값을 하나만 지정
+          웹 브라우저가 지정한 값을 수평 위칫값으로 간주
+          수직 위칫값: 50% | center로 간주
+    
+    ! background-size 속성
+      배경 이미지 크기 조절
+      속성값
+      ? auto(기본값): 원래 배경 이미지 크기만큼 표시
+      ? contain: 요소 안에 배경 이미지가 다 들어오도록 이미지를 확대, 축소
+
+      ? cover: 이미지의 너비와 높이를 지정
+      ? 크기
+      ? 백분율
+        : 값이 하나만 주어질 경우 - 너빗값으로 인식, 해당 너빗값에 맞춘 높잇값을 자동 계산
+        (cover, 크기, 백분율)
+
+    ! background-origin 속성
+      : 배경 이미지를 배치하기 위한 기준 설정
+      속성값
+      ? content-box: 내용 부분에만 이미지 표시(기본값)
+      ? padding-box: 패딩까지 배경이미지 표시
+      ? border-box: 테두리까지 배경 이미지 표시
+
+    ! background-attachment 속성
+      : 배경 이미지 고정
+      속성값
+      ? scroll(기본값)
+        : 화면을 스크롤하면 배경 이미지도 같이 스크롤
+      ? fixed
+        : 화면을 스크롤하면 배경이미지는 고정되고 내용만 스크롤
+    -->
+  <div id="container">
+    <div class="desc" id="clip-border">
+      <h1>롯데 자이언츠</h1>
+      <p>2023.10.24일 사직야구장에서 경기가 있습니다.</p>
+    </div>
+    <div class="desc" id="clip-padding">
+      <h1>롯데 자이언츠</h1>
+      <p>2023.10.24일 사직야구장에서 경기가 있습니다.</p>
+    </div>
+    <div class="desc" id="clip-content">
+      <h1>롯데 자이언츠</h1>
+      <p>2023.10.24일 사직야구장에서 경기가 있습니다.</p>
+    </div>
+  </div>
+
+  <hr />
+  <h2>KBO 프로야구</h2>
+  <ul>
+    <li>롯데 자이언츠</li>
+    <li>두산 베어스</li>
+    <li>SSG 랜더스</li>
+    <li>기아 타이거즈</li>
+  </ul>
+
+  <hr />
+  <h2>배경 이미지 크기 조절</h2>
+  <div id="container">
+    <div id="bg1"></div>
+    <div id="bg2"></div>
+    <div id="bg3"></div>
+    <div id="bg4"></div>
+    <div id="bg5"></div>
+    <div id="bg6"></div>
+  </div>
+</body>
+</html>

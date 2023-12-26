@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>text & password</title>
+</head>
+<body>
+  <!-- 
+    text(텍스트 필드)
+    : 주로 아이디나 이름, 주소 등 한 줄 짜리 일반 텍스트를 입력할 때 사용
+
+    password(비밀번호 필드)
+    : 입력하는 내용을 화면에 보여 주지 않아야 함으로 *(별표)나 ●(불릿)로 표시
+  -->
+  <form>
+    <label> 아이디(6자 이상)
+      <input type="text" size="10" value="leeseungah" />
+    </label>
+    <br />
+    <label> 비밀번호(숫자, 영문자 혼합 8자 이상)
+      <input type="password" minlength="8" maxlength="15" />
+    </label>
+  </form>
+
+  <!-- 
+    text, password 필드에서 사용하는 주요 속성
+    
+    - size 속성
+      : 길이를 지정, 화면에 몇 글자가 보이도록 할 것인지 지정
+
+    - value 속성
+      : 텍스트 필드 요소가 화면에 표시될 때 텍스트 필드 부분에 보여주는 내용
+      (해당 속성을 사용하지 않으면 빈 텍스트 필드가 표시)
+      !(비밀번호 필드에서 사용 X)
+
+    - maxlenght
+      : 필드에 입력할 수 있는 최대 문자 수를 지정
+  -->
+</body>
+</html>

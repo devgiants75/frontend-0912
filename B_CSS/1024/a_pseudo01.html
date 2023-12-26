@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가상 클래스 선택자 & 가상 요소</title>
+  <link rel="stylesheet" href="styles/a_pseudo_element.css">
+</head>
+<body>
+  <!--  
+    1. 사용자 동작에 반응하는 가상 클래스 선택자
+      - :hover, :focus, :active, :linke, :visited
+
+    2. 요소 상태에 따른 가상 클래스 선택자
+      - :target 
+        앵커로 연결된 부분에 스타일 적용
+
+      - :enabled, :disabled
+        폼 요소의 사용 여부에 따라 스타일 적용
+      - :checked
+        라디오 버튼이나 체크 박스에 체크 했을 때 스타일 적용
+
+      - :not
+        특정 요소를 제외하고 스타일 적용
+  -->
+  <nav class="navi">
+    <ul>
+      <li><a href="#intro">이용 안내</a></li>
+      <li><a href="#room">객실 소개</a></li>
+      <li><a href="#pay">예약 방법 및 요금</a></li>
+      <li><a href="#reservation">예약하기</a></li>
+    </ul>
+  </nav>
+  <div id="intro" class="contents">
+    <h2>이용 안내</h2>
+    <p> ... </p>
+  </div>
+  <div id="room" class="contents">
+    <h2>객실 소개</h2>
+    <p> ... </p>
+  </div>
+  <div id="pay" class="contents">
+    <h2>예약 방법 및 요금</h2>
+    <p> ... </p>
+  </div>
+  <div id="reservation" class="contents">
+    <h2>예약하기</h2>
+    <p> ... </p>
+  </div>
+
+  <div class="form-examples">
+    <h2>폼 요소 예제(enabled, disabled)</h2>
+
+    <input type="checkbox" id="checkbox-example" />
+    <label for="checkbox-example">
+      체크 박스 예제
+    </label>
+    <br />
+    <input type="radio" name="radio-group" id="radio-example" />
+    <label for="radio-example">
+      라디오 버튼 예제
+    </label>
+    <br />
+    <input 
+      type="text" 
+      id="text-example" 
+      placeholder="입력 필드 예제" 
+      disabled 
+    />
+  </div>
+</body>
+</html>

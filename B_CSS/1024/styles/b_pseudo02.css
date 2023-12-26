@@ -1,0 +1,56 @@
+/* 자식 요소가 단 하나만 있는 경우 */
+li:only-child {
+  background-color: #e0e0e0;
+}
+
+/* 특정 타입의 요소가 단 하나만 있는 경우 */
+p:only-of-type {
+  font-weight: bold;
+}
+
+/* 첫 번째 자식요소 */
+li:first-child {
+  color: red;
+}
+
+/* 마지막 자식요소 */
+li:last-child {
+  color: blue;
+}
+
+
+/* 특정 타입의 첫 번째 요소 */
+p:first-of-type {
+  font-style: italic;
+}
+
+/* 특정 타입의 마지막 요소 */
+p:last-of-type {
+  text-decoration: underline;
+}
+
+/* n번째 자식 요소 */
+li:nth-child(3) {
+  background-color: #4d4d4d;
+}
+
+/* n번째 타입의 요소 */
+p:nth-of-type(2) {
+  color: green;
+}
+
+/*! 가상 요소 선택자 예제 */
+
+/* 섹션 제목 앞 뒤로 장식 추가 */
+.section-title::before,
+.section-title::after {
+  content: "###";
+  color: #0068E9;
+  margin: 0 5px;
+}
+
+/* 섹션의 마지막 문단에 하트 추가 */
+.section p:last-of-type::after {
+  content: " ❤";
+  color: #ffd700;
+}

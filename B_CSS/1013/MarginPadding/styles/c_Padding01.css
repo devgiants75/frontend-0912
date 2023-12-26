@@ -1,0 +1,20 @@
+h1 {
+  display: inline-block;
+  border: 1px solid #000000;
+  background-color: aliceblue;
+}
+
+#padding1 {
+  padding: 20px;
+}
+#padding2 {
+  padding: 10px 40px;
+}
+#padding3 {
+  padding: 20px 30px 40px 50px;
+}
+#padding4 {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-bottom: 30px;
+}

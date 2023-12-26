@@ -1,0 +1,361 @@
+/* Header 영역 스타일링 */
+.header {
+  padding-bottom: 48px;
+}
+
+.header-inner {
+  position: relative;
+  width: 743px;
+  margin: 0 auto;
+  padding-top: 108px;
+  text-align: center;
+}
+
+.logo {
+  display: inline-block;
+  background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_00_common_978240a6.png);
+  background-size: 244px 107px;
+  /* 배경 이미지의 위치를 왼쪽에서 0px, 위에서 -51px */
+  background-position: 0 -51px;
+  background-repeat: no-repeat;
+  width: 155px;
+  height: 30px;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.lang {
+  position: absolute;
+  top: 20px;
+  right: 0px;
+}
+
+.select {
+  position: relative;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  width: 100%;
+  min-width: 95px;
+  height: 30px;
+  padding: 4px 10px 6px 8px;
+  color: #333;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  /* 요소의 쌓임 순서를 1로 설정 */
+  /* 
+    웹 페이지 상에서 요소의 쌓임 순서를 결정
+    ? 속성값: 정수값
+      - 값이 커질수록 다른 요소들 위로 배치
+      - position 속성이 static이 아닌 경우에만 작동
+  */
+  z-index: 1;
+}
+
+/* 메인 콘틴츠 영역 스타일링 */
+.sign-in-wrapper {
+  width: 460px;
+  margin: 0 auto;
+}
+
+.panel-wrapper {
+  position: relative;
+  z-index: 3;
+  /* 마진에 음수값 지정 시 해당 방향으로 이동 */
+  margin-top: -8px;
+}
+
+.panel-item {
+  border: 1px solid #c6c6c6;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 5px 8px 0 rgba(68, 68, 68, 0.04);
+}
+
+.panel-inner {
+  padding: 20px 28px;
+}
+
+.input-row {
+  position: relative;
+  /* 요소를 테이블처럼 표시 */
+  display: table;
+  /* 
+    테이블 레이아웃 고정
+    셀의 너비가 동일하게 유지
+   */
+  table-layout: fixed;
+  width: -webkit-fill-available;
+  height: 100%;
+  border: 1px solid #dadada;
+  padding: 14px 17px 13px;
+}
+
+.input-row:first-child {
+  border-radius: 6px 6px 0 0;
+  box-shadow: none;
+}
+
+.input-row:last-child {
+  border-radius: 0 0 6px 6px;
+}
+/* 
+  .input-row 다음에 오는 .input-row 요소의 상단 마진 
+*/
+.input-row+.input-row {
+  margin-top: -1px;
+}
+
+.icon-cell {
+  /* 요소를 테이블 셀처럼 표시 */
+  display: table-cell;
+  width: 24px;
+  /* 수직 정렬을 중앙 설정 */
+  vertical-align: middle;
+}
+
+.icon-id {
+  position: absolute;
+  top: 50%;
+  left: 17px;
+  margin-top: -8px;
+  background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_01_login_008d5216.png);
+  background-size: 266px 225px;
+  background-position: -93px -203px;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.icon-password {
+  position: absolute;
+  top: 50%;
+  left: 17px;
+  margin-top: -8px;
+  background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_01_login_008d5216.png);
+  background-size: 266px 225px;
+  background-position: -129px -203px;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.input-text {
+  position: relative;
+  display: table-cell;
+  padding-right: 30px;
+  width: -webkit-fill-available;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: -0.5px;
+  color: #222;
+  z-index: 4;
+}
+
+.sign-in-keep-wrapper {
+  position: relative;
+  margin-top: 13px;
+  padding-right: 90px;
+}
+
+.keep-check {
+  position: relative;
+  padding-left: 23px;
+}
+
+.ip-check {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 38px;
+}
+
+.input-keep {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 15px;
+  height: 15px;
+}
+
+.keep-text::before {
+  /* 가상 요소의 내용을 비워둠 */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_01_login_008d5216.png);
+  background-position: -244px -87px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: 266px 225px;
+}
+
+.keep-text {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;line-height: 17px;
+  color: #777;
+}
+
+.sign-in-button-wrapper {
+  margin-top: 38px;
+}
+
+.sign-in-button {
+  display: block;
+  width: 100%;
+  padding: 13px 0 13px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  background-color: #03c75a;
+}
+
+.button-text {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #fff;
+}
+
+.find-wrapper {
+  padding: 20px 0 35px;
+  text-align: center;
+}
+
+.find-wrapper li {
+  position: relative;
+  display: inline-block;
+}
+
+.find-text {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  color: #888;
+  /* 요소를 수직으로 상단에 맞춤. */
+  vertical-align: top;
+}
+
+.find-wrapper li+li {
+  /* 인접한 li 요소에 왼쪽 패딩을 추가 */
+  padding-left: 28px;
+}
+
+.find-wrapper li+li::before {
+  /* 가상 요소의 내용은 비워둠 */
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 12px;
+  width: 1px;
+  height: 12px;
+  border-radius: 0.5px;
+  background-color: #dadada;
+}
+
+/* Banner 영역 스타일링 */
+.banner-wrapper {
+  width: 460px;
+  height: 147px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.banner-content {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  line-height: 0;
+}
+
+.banner-img {
+  width: 460px;
+  height: 147px;
+}
+
+/* Footer 영역 스타일링 */
+.footer {
+  padding: 63px 0 32px;
+}
+
+.footer-inner {
+  position: relative;
+  text-align: center;
+}
+
+.footer li {
+  position: relative;
+  display: inline-block;
+}
+
+.text {
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.05px;
+  color: #888;
+}
+
+.footer-link li+li {
+  position: relative;
+  padding-left: 13px;
+}
+
+.footer-link li+li::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 1px;
+  height: 11px;
+  background-color: #dadada;
+}
+
+.footer-logo {
+  display: inline-block;
+  vertical-align: bottom;
+  background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_00_common_978240a6.png);
+  background-size: 244px 107px;
+  width: 70px;
+  height: 15px;
+  background-position: -157px -51px;
+  background-repeat: no-repeat;
+}
+
+.copy {
+  padding: 0 2px;
+  font-weight: 500;
+  color: #000;
+  font-size: 12px;
+  letter-spacing: -0.5px;
+}
+
+.footer-item span {
+  vertical-align: top;
+}
+
+/* 로그인 에러 메시지 출력 스타일링 */
+.sign-in-error {
+  position: relative;
+  min-height: 34px;
+  margin: 24px 0 -24px;
+  padding-right: 40px;
+}
+
+.error-message {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.5px;
+  color: #ff003e;
+  vertical-align: middle;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML 하이퍼링크</title>
+</head>
+<body>
+  <h1>a태그 & href속성</h1>
+  <p>
+    a태그: 링크를 삽입하는 태그
+    - 입력값에 따라 텍스트 링크 또는 이미지 링크로 사용
+    - 마우스를 링크 위로 이동하면 마우스 화살표가 작은 손으로 변경
+
+    href속성: 링크의 수신처를 입력
+  </p>
+  <a href="링크할 주소">텍스트 또는 이미지</a>
+  
+  <p>텍스트 링크</p>
+  <a href="https://naver.com">네이버 바로가기</a>
+  - 텍스트에 링크 추가 시
+    : 밑줄이 생기고 글자색이 검은색에서 파란색으로 변경
+    : 방문하지 않은 링크는 파란색
+    : 한 번이라도 클릭한 텍스트 링크는 자주색으로 변경
+
+  <p>이미지 링크</p>
+  <a href="https://naver.com"><img src="../diff-directory.jpg" alt="네이버 바로가기" width="50%"></a>
+
+  <h2>하이퍼링크의 target속성</h2>
+  - 링크를 새탭에서 열어주는 속성: 연결된 문서를 열 위치를 지정
+
+  <br />
+  <p>
+    - _self: 디폴트(기본값): 링크가 있는 동일한 창/탭에서 문서를 엽니다.
+    - _blank: 새 창/탭에서 문서를 엽니다.
+
+    <!-- 프레임셋을 사용하는 페이지에서 작동하는 속성값 -->
+    - _parent: 상위 프레임에서 문서를 엽니다.
+    - _top: 창 전체의 본문에서 문서를 엽니다.
+  </p>
+  
+  <a href="https://www.giantsclub.com/html/index.asp?" target="_self">
+    롯데 자이언츠(_self)
+  </a>
+
+  <br />
+  <a href="https://www.giantsclub.com/html/index.asp?" target="_blank">
+    롯데 자이언츠(_blank)
+  </a>
+
+  <br />
+  <a href="https://www.giantsclub.com/html/index.asp?" target="_parent">
+    롯데 자이언츠(_parent)
+  </a>
+
+  <br /> 
+  <a href="https://www.giantsclub.com/html/index.asp?" target="_top">
+    롯데 자이언츠(_top)
+  </a>
+</body>
+</html>

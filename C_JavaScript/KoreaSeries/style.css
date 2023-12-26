@@ -1,0 +1,27 @@
+body {
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  color: #333333;
+}
+
+#predict-button {
+  margin: 20px;
+  padding: 15px 30px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#prediction-result {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
