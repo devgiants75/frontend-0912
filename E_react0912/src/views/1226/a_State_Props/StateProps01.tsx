@@ -31,8 +31,16 @@ const initialValue: UserType = {
 export default function StateProps01() {
   const [userInfo, setUserInfo] = useState(initialValue);
 
-  const onChange = () => {
-    
+  // 비구조화 할당
+  const { name, age } = userInfo; 
+
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { value, name } = e.target;
+    setUserInfo({
+      ...userInfo,
+      // name 키를 가진 값을 value로 설정
+      [name]: value
+    })
   }
 
   return (
@@ -41,11 +49,15 @@ export default function StateProps01() {
         type="text" 
         placeholder='이름을 입력하세요.'
         onChange={onChange}
+        name="name"
+        value={name}
       />
       <input 
         type="text" 
         placeholder='나이를 입력하세요.'
         onChange={onChange}
+        name='age'
+        value={age}
       />
       <ChildProps01 userInfo={userInfo}/>
     </>
