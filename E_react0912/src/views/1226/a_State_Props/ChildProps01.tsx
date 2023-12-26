@@ -6,7 +6,7 @@ interface UserType {
 }
 
 type ChildProps = {
-  userInfo: UserType;
+  userInfo: UserType | undefined;
 }
 
 //^ 자식 컴포넌트
@@ -14,8 +14,12 @@ type ChildProps = {
 const ChildProps01 = ({ userInfo }: ChildProps) => {
   return (
     <div>
-      <p>Name: {userInfo.name}</p>
-      <p>Age: {userInfo.age}</p>
+      {userInfo && (
+        <>
+          <p>Name: {userInfo.name}</p>
+          <p>Age: {userInfo.age}</p>
+        </>
+      )}
     </div>
   )
 }

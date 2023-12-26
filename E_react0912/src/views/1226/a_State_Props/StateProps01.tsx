@@ -29,18 +29,29 @@ const initialValue: UserType = {
 
 //^ 부모 컴포넌트
 export default function StateProps01() {
-  const [userInfo, setUserInfo] = useState(initialValue);
+  // 사용자 입력을 추적하는 상태
+  const [userInfo, setUserInfo] = useState<UserType>(initialValue);
+
+  // 최종 제출된 값에 대한 상태
+  const [submittedData, setSubmittedData] = useState<UserType | undefined>();
 
   // 비구조화 할당
   const { name, age } = userInfo; 
 
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  // 입력 값이 변경될 때 호출되는 함수
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value, name } = e.target;
     setUserInfo({
       ...userInfo,
       // name 키를 가진 값을 value로 설정
       [name]: value
-    })
+    });
+  };
+
+  // 확인 버튼을 눌렀을 때 호출되는 함수
+  const handleSubmit = () => {
+    // submittedData를 현재 userInfo 값으로 업데이트
+    setSubmittedData(userInfo);
   }
 
   return (
@@ -48,18 +59,19 @@ export default function StateProps01() {
       <input 
         type="text" 
         placeholder='이름을 입력하세요.'
-        onChange={onChange}
+        onChange={handleInputChange}
         name="name"
         value={name}
       />
       <input 
         type="text" 
         placeholder='나이를 입력하세요.'
-        onChange={onChange}
+        onChange={handleInputChange}
         name='age'
         value={age}
       />
-      <ChildProps01 userInfo={userInfo}/>
+      <button onClick={handleSubmit}>확인</button>
+      <ChildProps01 userInfo={submittedData} />
     </>
   )
 }

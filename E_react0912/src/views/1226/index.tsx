@@ -1,5 +1,7 @@
 import React from 'react'
 import StateProps01 from './a_State_Props/StateProps01'
+import StateProps02 from './a_State_Props/StateProps02'
+import UseRef01 from './b_Ref/UseRef01'
 
 export default function Index() {
   return (
@@ -11,6 +13,10 @@ export default function Index() {
         상태관리의 컴포넌트 트리 전달
       </h2>
       <StateProps01 />
+      <StateProps02 />
+
+      <h2 style={{backgroundColor: 'pink'}}>useRef로 특정 DOM 선택</h2>
+      <UseRef01 />
     </>
   )
 }
