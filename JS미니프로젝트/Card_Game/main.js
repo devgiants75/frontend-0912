@@ -135,10 +135,10 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       firstCard.classList.remove('flipped');
       secondCard.classList.remove('flipped');
-    }, 1000);
 
-    // 카드를 뒤집은 후 게임판 잠금을 해제
-    resetBoard();
+      // 카드를 뒤집은 후 게임판 잠금을 해제
+      resetBoard();
+    }, 1000);
   }
 
   //! 게임판을 초기화하는 함수 정의
@@ -214,11 +214,19 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 // 배열의 요소를 무작위로 섞는 커스텀 함수
-function shuffle() {
+function shuffle(array) {
   // 배열의 마지막 요소부터 시작하여 첫 번째 요소까지 역순으로 반복
-
+  for (let i = array.length - 1; i > 0; i--) {
     // 0부터 i까지의 무작위 인덱스를 생성
     // : Math.floor(Math.random() * (i + 1))
     // 현재 요소(i)와 무작위로 선택된 요소(j)의 위치를 교환
 
+    // 0과 1 사이의 무작위 수를 생성하여
+    // 이를 i + 1로 곱하여 0부터 i까지의 범위 내에서 무작위 j를 생성
+    let j = Math.floor(Math.random() * (i + 1));
+    // 배열의 i번째 원소와 j번째 요소를 서로 바꿈
+    // : 구조분해 할당으로 표현
+    // : '피셔-에이츠 셔플'의 알고리즘 기반
+    [array[i], array[j]] = [array[j], array[i]]
+  }
 }

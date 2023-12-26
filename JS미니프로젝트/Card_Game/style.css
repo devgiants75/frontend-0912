@@ -90,3 +90,9 @@ button {
   font-weight: 900;
   color: white;
 }
+
+#button-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
