@@ -6,12 +6,16 @@ import GoalList from './GoalList';
 // spread연산자, concat 함수를 사용
 
 //! 배열에 항목을 제거
+// filter 메소드 사용 (해당 항목과 일치하는 id를 제거)
+
+//! 배열에 항목을 수정
 
 // 목표 타입 정의
 interface Goal {
   id: number;
   title: string;
   explanation: string;
+  active: boolean
 }
 
 // 초기 목표
@@ -19,17 +23,20 @@ const initialGoals: Goal[] = [
   {
     id: 1,
     title: '책 10권 읽기',
-    explanation: '경제 서적 10권 읽기'
+    explanation: '경제 서적 10권 읽기',
+    active: true
   },
   {
     id: 2,
-    title: '책 11권 읽기',
-    explanation: '경제 서적 11권 읽기'
+    title: '야구 원정 가기',
+    explanation: '잠실 구장 가보기',
+    active: false
   },
   {
     id: 3,
-    title: '책 12권 읽기',
-    explanation: '경제 서적 12권 읽기'
+    title: '저축 하기',
+    explanation: '맥북 구매 하기',
+    active: false
   },
 ]
 
@@ -67,7 +74,8 @@ export default function GoalApp() {
     const newGoal = {
       id: nextId.current,
       title: goalInput.title,
-      explanation: goalInput.explanation
+      explanation: goalInput.explanation,
+      active: false
     };
     // 현재 목표를 목표 목록에 추가
     // : 기존의 배열을 수정하지 않고 복사하여 사용
@@ -85,9 +93,30 @@ export default function GoalApp() {
   }
 
   const handleRemove = (id: number) => {
-    // user.id가 매개변수로 일치하지 않는 원소만 '추출'해서 새로운 배열을 만듬
-    // : user.id가 매개변수로 받아오는 id 인것을 제거
-    setGoals(goals)
+    // filter: 배열을 순회하여 함수가 True인 요소만을 새로운 배열로 추출
+
+    // goal.id가 매개변수로 일치하지 않는 원소만 '추출'해서 새로운 배열을 만듬
+    // : goal.id가 매개변수로 받아오는 id 인것을 제거
+    setGoals(goals.filter(goal => goal.id !== id ));
+  }
+
+  const handleToggle = (id: number) => {
+    // 전체 배열을 순회하여 goal의 id가 매개변수의 id와 일치하는 요소는 전체 속성 중에서 active값을 반전
+    // 일치하지 않는 요소는 해당 요소 그대로를 반환
+
+    //? map()과 forEach()의 차이점
+    // forEach()
+    // : 기존 배열(Array)을 변경
+    // : 단순히 반복문을 대체하기 위한 함수
+
+    // map()
+    // : 새로운 배열(Array)를 반환
+    // : 요소값을 다른 값으로 mapping한(기능을 적용한) 새로운 배열을 생성하는 함수 
+    setGoals(
+      goals.map(goal =>
+        goal.id === id ? {...goal, active: !goal.active } : goal
+      )
+    )
   }
   
   return (
@@ -99,7 +128,7 @@ export default function GoalApp() {
       />
 
       <h3>2024년 목표 목록</h3>
-      <GoalList goals={goals} onRemove={handleRemove}/>
+      <GoalList goals={goals} onRemove={handleRemove} onToggle={handleToggle} />
     </div>
   )
 }
