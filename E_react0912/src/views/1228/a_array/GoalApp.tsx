@@ -1,5 +1,11 @@
 import React, { ChangeEvent, useRef, useState } from 'react'
 import CreateGoal from './CreateGoal'
+import GoalList from './GoalList';
+
+//! 배열에 항목을 추가
+// spread연산자, concat 함수를 사용
+
+//! 배열에 항목을 제거
 
 // 목표 타입 정의
 interface Goal {
@@ -56,7 +62,7 @@ export default function GoalApp() {
   };
 
   // 목표 추가 핸들러
-  const handleAddGoal = () => {
+  const handleCreate = () => {
     // 새로운 목표 생성
     const newGoal = {
       id: nextId.current,
@@ -64,11 +70,24 @@ export default function GoalApp() {
       explanation: goalInput.explanation
     };
     // 현재 목표를 목표 목록에 추가
-    setGoals([...goals, newGoal]);    
+    // : 기존의 배열을 수정하지 않고 복사하여 사용
+    // : 불변성
+    // >> spread 연산자 (...)
+    // >> concat 함수
+    //    : 기존의 배열을 수정하지 않고, 새로운 원소가 추가된 새로운 배열을 생성
+    //? setGoals([...goals, newGoal]);    
+    setGoals(goals.concat(newGoal));
+
     // 입력 필드 초기화
     setGoalInput({title: '', explanation: ''});
     // 다음 ID 증가
     nextId.current += 1;
+  }
+
+  const handleRemove = (id: number) => {
+    // user.id가 매개변수로 일치하지 않는 원소만 '추출'해서 새로운 배열을 만듬
+    // : user.id가 매개변수로 받아오는 id 인것을 제거
+    setGoals(goals)
   }
   
   return (
@@ -76,14 +95,11 @@ export default function GoalApp() {
       <CreateGoal
         goal={goalInput}
         onChange={handleChange}
-        onCreate={handleAddGoal}
+        onCreate={handleCreate}
       />
 
       <h3>2024년 목표 목록</h3>
-      <ul>
-        {/* title - explanation */}
-        {}
-      </ul>
+      <GoalList goals={goals} onRemove={handleRemove}/>
     </div>
   )
 }
