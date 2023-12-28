@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //! 매치되지 않은 카드를 다시 뒤집는 함수 정의
   function unflipCards() {
     // 게임판을 잠금
-    lockBoard = ture;
+    lockBoard = true;
 
     setTimeout(() => {
       firstCard.classList.remove('flipped');
