@@ -13,6 +13,9 @@ export default function HookReview() {
   // 사용자의 검색어를 저장하는 상태
   const [searchTerm, setSearchTerm] = useState<string>('');
 
+  // 새로운 사진 제목을 저장하는 상태
+  const [newPhotoTitle, setNewPhotoTitle] = useState<string>('');
+
   // 현재 수정 중인 사진의 제목을 저장하는 상태
   const [editTitle, setEditTitle] = useState<string>('');
 
@@ -29,6 +32,27 @@ export default function HookReview() {
     .then(response => response.json())
     .then(data => setPhotos(data.slice(0, 15)));
   }, []); // 빈 의존성 배열: 마운트 시에만 실행
+
+  // 새 사진을 추가하는 함수
+  const addPhoto = () => { 
+    // 새로운 사진 객체를 생성
+    const newPhoto: Photo = {
+      // Math.max 함수: 해당 목록에 제일 큰 숫자를 불러옴
+      // map 함수를 사용하여 photos 배열의 각 사진에서 ID만 추출
+      // , photos 배열이 비어있을 경우 기본값으로 0을 사용
+      id: Math.max(...photos.map(photo => photo.id), 0) + 1,
+
+      // 입력 필드에서 사용자가 입력한 새 사진 제목을 사용
+      title: newPhotoTitle,
+    };
+
+    // 사진 목록 상태를 갱신
+    setPhotos([...photos, newPhoto]);
+
+    // 입력 필드 초기화
+    setNewPhotoTitle('');
+  }
+
 
   // 특정 사진을 삭제하는 함수
   const deletePhoto = (id: number): void => {
@@ -47,9 +71,17 @@ export default function HookReview() {
 
   // 사진 수정을 완료하는 함수
   const editPhoto = () => {
-
+    // 사진 수정 완료 시 렌더링 된 사진 배열의 요소를 변경
+    setPhotos(
+      photos.map(photo => 
+        // ID가 일치하면 제목을 수정
+        photo.id === editingId ? { ...photo, title: editTitle } : photo
+      )
+    );
+    
+    setEditTitle(''); // 입력 필드 초기화
+    setEditingId(null); // 수정 중인 사진 ID 초기화
   }
-
 
   // 검색어에 따라 필터링된 사진 목록 생성
   // includes()메서드
@@ -59,16 +91,38 @@ export default function HookReview() {
 
   return (
     <>
+      {/* 검색 입력 필드 */}
+      <input 
+        type="text"
+        placeholder='Search photos'
+        value={searchTerm}  
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+      <hr />
       {/* 새 사진 추가 입력 필드 */}
+      <input 
+        type="text"
+        placeholder='Add new photo title'  
+        value={newPhotoTitle}
+        onChange={(e) => setNewPhotoTitle(e.target.value)}
+      />
 
       {/* 사진 추가 버튼 */}
+      <button onClick={addPhoto}>Add Photo</button>
+
+      <hr />
 
       {/* 
         수정 중인 사진을 위한 입력 필드 및 저장 버튼 
       */}
       {editingId !== null && (
         <div>
-          
+          <input 
+            type="text"
+            value={editTitle}
+            onChange={(e) => setEditTitle(e.target.value)}
+          />
+          <button onClick={editPhoto}>Save Edit</button>
         </div>
       )}
 
@@ -76,11 +130,19 @@ export default function HookReview() {
       <ul>
         {filteredPhotos.map(photo => (
           <li key={photo.id}>
-            {photo.title}
-            {/* 수정 버튼 */}
-            <button onClick={() => startEdit(photo)}>Edit</button>
-            {/* 삭제 버튼 */}
-            <button onClick={() => deletePhoto(photo.id)}>Delete</button>
+            {photo.id === editingId ?
+              (
+                `Editing: ${photo.title}`
+              ) : (
+                <>
+                  {photo.title}
+                  {/* 수정 버튼 */}
+                  <button onClick={() => startEdit(photo)}>Edit</button>
+                  {/* 삭제 버튼 */}
+                  <button onClick={() => deletePhoto(photo.id)}>Delete</button>
+                </>
+              )
+            }
           </li>
         ))}
       </ul>
