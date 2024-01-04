@@ -1,6 +1,13 @@
 import React, { useReducer, useState } from 'react'
 import { reducer, initialState } from './Reducer';
 
+//! useState, useReducer 차이
+// useState: 단순한 값, 객체, 배열을 관리
+// >> 컴포넌트의 로컬 상태를 선언할 때 사용
+
+// useReducer: 복잡한 상태 로직을 관리
+// >> 상태 업데이트 로직을 컴포넌트 외부에서 작성 가능 - 로직의 재사용을 가능
+
 // 메인 컴포넌트
 export default function UseReducer02() {
   // useReducer를 사용한 todos 상태관리
