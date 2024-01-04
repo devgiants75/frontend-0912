@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useInput } from '../hooks/useInput';
 import { Button, Container, IconButton, List, ListItem, ListItemText, TextField } from '@mui/material'
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -28,18 +28,6 @@ export default function Framework() {
   const deleteTodo = (id: number) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
-
-  // Todo 목록 로컬 스토리지에 저장
-  useEffect(() => {
-    const storedData = localStorage.getItem("todos");
-    const storedTodos = storedData ? JSON.parse(storedData) : [];
-    setTodos(storedTodos);
-  }, []);
-
-  // Todo 목록 변경시 로컬 스토리지 업데이트
-  useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
 
   return (
     <Container maxWidth="sm">
