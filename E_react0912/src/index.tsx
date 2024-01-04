@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { CssBaseline } from '@mui/material';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,6 +14,8 @@ root.render(
     {/* 라우터 적용을 위한 컴포넌트 */}
     <BrowserRouter>
       {/* 화면에 렌더링되는 UI 전체 */}
+      {/* 일관적인 스타일 적용 - CSS를 전역에서 정규화 시켜주는 컴포넌트 */}
+      <CssBaseline />
       <App />
     </BrowserRouter>
   </React.StrictMode>

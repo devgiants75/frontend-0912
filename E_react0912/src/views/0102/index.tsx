@@ -3,6 +3,7 @@ import HookReview from './a_hook_review/HookReview'
 import UseMemo01 from './b_hooks/UseMemo'
 import UseCallback from './b_hooks/UseCallback'
 import ReactMemo from './b_hooks/ReactMemo'
+import Mui01 from './c_MUI/Mui01'
 
 export default function Index() {
   return (
@@ -14,6 +15,9 @@ export default function Index() {
       <UseMemo01 />
       <UseCallback />
       <ReactMemo />
+      
+      <h1>MUI 사용 방법</h1>
+      <Mui01 />
     </>
   )
 }
