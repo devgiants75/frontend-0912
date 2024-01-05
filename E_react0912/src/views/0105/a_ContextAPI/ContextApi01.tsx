@@ -1,5 +1,5 @@
-import React, { useContext } from 'react'
-import { ThemeContext, useBackgroundColor} from './ThemeContext'
+import React from 'react'
+import { useBackgroundColor } from './ThemeContext'
 
 //! 전역 상태
 // : 프로젝트 전체에 영향을 끼치는 상태

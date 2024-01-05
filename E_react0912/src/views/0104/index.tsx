@@ -4,19 +4,14 @@ import UseReducer02 from './a_useReducer/UseReducer02'
 import CustomHook01 from './b_customHook/CustomHook01'
 import Framework from './c_style_framework/Framework'
 
-import { ThemeContext } from '../0105/a_ContextAPI/ThemeContext'
+import { useBackgroundColor } from '../0105/a_ContextAPI/ThemeContext'
 
 export default function Index() {
 
-  const themeContext = useContext(ThemeContext);
-
-  const { theme, toggleTheme } = themeContext;
-
-  const backgroundColor = theme === 'lightblue' ? 'pink' : 'lightblue';
+  const { theme } = useBackgroundColor();
 
   return (
-    <div style={{ backgroundColor: backgroundColor }}>
-      <button onClick={toggleTheme}>Toggle Theme</button>
+    <div style={{ backgroundColor: theme }}>
       <h1>20240104 수업 자료</h1>
       <h2>useReducer</h2>
       <UseReducer01 />
