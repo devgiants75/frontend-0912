@@ -12,9 +12,14 @@ interface ThemeContextType {
   toggleTheme: () => void;
 }
 
+const defaultThemeContext: ThemeContextType = {
+  theme: 'light', // 기본 테마 값 설정
+  toggleTheme: () => {} // 빈 함수로 초기화
+};
+
 //? ThemeContext 생성
 // : Provider를 통해 실제 값을 제공받음
-export const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+export const ThemeContext = createContext<ThemeContextType>(defaultThemeContext);
 
 //! 생성된 Context에 값을 제공하기 위해서
 // Context.Provider 컴포넌트를 사용
