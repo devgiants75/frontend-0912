@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { ThemeContext} from './ThemeContext'
+import { ThemeContext, useBackgroundColor} from './ThemeContext'
 
 //! 전역 상태
 // : 프로젝트 전체에 영향을 끼치는 상태
@@ -15,16 +15,16 @@ import { ThemeContext} from './ThemeContext'
 
 export default function ContextApi01() {
   // useContext 훅을 사용하여 ThemeContext의 값을 가져옴
-  const themeContext = useContext(ThemeContext);
+  const { toggleTheme } = useBackgroundColor();
 
   // themeContext가 없으면 아무것도 렌더링 X
-  if (!themeContext) return null;
+  if (!toggleTheme) return null;
 
   // 존재할 경우 버튼을 렌더링
   // : 버튼 클릭 시 themeContext의 toggleTheme 함수를 호출하여 테마 토글
   return (
-    <button onClick={themeContext.toggleTheme}>
-      {themeContext.theme === 'light' ? 'Dark' : 'Light'}
+    <button onClick={toggleTheme}>
+      Click
     </button>
   )
 }

@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
-import ContextApi01 from './a_ContextAPI/ContextApi01'
-import ThemeProvider from './a_ContextAPI/ThemeProvider'
+import React, { useContext } from 'react';
+import ContextApi01 from './a_ContextAPI/ContextApi01';
 import { ThemeContext } from './a_ContextAPI/ThemeContext';
+import Styled01 from './StyledComponents/Styled01';
 
 export default function Index() {
   // Context API를 사용한 전역 상태관리
@@ -9,13 +9,18 @@ export default function Index() {
   const { theme } = useContext(ThemeContext);
 
   // 현재 테마에 따라 배경색 설정
-  const backgroundColor = theme === 'light' ? 'white' : 'pink';
+  const backgroundColor = theme === 'lightblue' ? 'pink' : 'lightblue';
   
   return (
     <div style={{ backgroundColor: backgroundColor }}>
       <h1>0105 리액트 수업 자료</h1>
       <h2>Context API</h2>
       <ContextApi01 />
+
+      <h2>
+        Styled Components
+      </h2>
+      <Styled01 />
     </div>
   )
 }

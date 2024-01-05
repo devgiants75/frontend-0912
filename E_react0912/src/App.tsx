@@ -12,10 +12,20 @@ import Index0104 from "./views/0104";
 import Index0105 from "./views/0105"
 
 import ThemeProvider from "./views/0105/a_ContextAPI/ThemeProvider";
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+`;
 
 function App() {
   return (
     <>
+      <GlobalStyle />
       <ThemeProvider>
         <Routes>
           {/* 

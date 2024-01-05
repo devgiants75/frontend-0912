@@ -12,7 +12,7 @@ export default function Index() {
 
   const { theme, toggleTheme } = themeContext;
 
-  const backgroundColor = theme === 'light' ? 'white' : 'pink';
+  const backgroundColor = theme === 'lightblue' ? 'pink' : 'lightblue';
 
   return (
     <div style={{ backgroundColor: backgroundColor }}>
