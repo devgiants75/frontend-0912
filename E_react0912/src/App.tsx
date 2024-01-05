@@ -9,6 +9,7 @@ import Index1228 from "./views/1228";
 import Index1229 from "./views/1229/react";
 import Index0102 from "./views/0102";
 import Index0104 from "./views/0104";
+import Index0105 from "./views/0105";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/1229" element={<Index1229 />} />
         <Route path="/0102" element={<Index0102 />} />
         <Route path="/0104" element={<Index0104 />} />
+        <Route path="/0105" element={<Index0105 />} />
       </Routes>
     </>
   );
