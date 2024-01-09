@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 interface User {
   id: number;
@@ -9,15 +9,14 @@ interface User {
 
 export default function Axios02() {
   const [users, setUsers] = useState<User[]>();
+  const [newUser, setNewUser] = useState({
+    username: '',
+    email: ''
+  });
+  const userIdRef = useRef(5);
 
   // 서버 메인 경로
   const API_URL = 'http://localhost:5000/users';
-
-  // input Change Handler
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-
-  }
-
 
   // 사용자 조회
   const fetchUsers = async () => {
@@ -32,6 +31,22 @@ export default function Axios02() {
     }
   }
 
+  // 사용자 생성
+  const createUser = async () => {
+    if(!newUser.username || !newUser.email) return;
+
+    const newId = ++userIdRef.current;
+    try {
+      const response = await axios.post(API_URL, {id: newId, ...newUser});
+      if (users) {
+        setUsers([...users, response.data]);
+        setNewUser({username: '', email: ''});
+      }
+    } catch(error) {
+      console.log(error);
+    }
+  }
+
   useEffect(() => {
     fetchUsers();
   }, []);
@@ -42,14 +57,16 @@ export default function Axios02() {
         type="text"
         value={newUser.username}
         name='username'
-        onChange={handleInputChange}
+        onChange={(e) => setNewUser({...newUser, username: e.target.value})}
       />
       <input 
         type="text"
         value={newUser.email}
         name='email'
-        onChange={handleInputChange}
+        onChange={(e) => setNewUser({...newUser, email: e.target.value})}
       />
+
+      <button onClick={createUser}>Create User</button>
       {users && (
         <ul>
           {users.map(user => (

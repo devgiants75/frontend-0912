@@ -1,9 +1,29 @@
 {
   "users": [
-    { "id": 1, "username": "a", "email": "aa"},
-    { "id": 2, "username": "b", "email": "bb"},
-    { "id": 3, "username": "c", "email": "cc"},
-    { "id": 4, "username": "d", "email": "dd"},
-    { "id": 5, "username": "e", "email": "ff"}
+    {
+      "id": 1,
+      "username": "a",
+      "email": "aa"
+    },
+    {
+      "id": 2,
+      "username": "b",
+      "email": "bb"
+    },
+    {
+      "id": 3,
+      "username": "c",
+      "email": "cc"
+    },
+    {
+      "id": 4,
+      "username": "d",
+      "email": "dd"
+    },
+    {
+      "id": 5,
+      "username": "e",
+      "email": "ff"
+    }
   ]
 }
