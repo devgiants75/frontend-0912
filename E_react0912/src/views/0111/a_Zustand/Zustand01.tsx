@@ -38,7 +38,7 @@ interface CountState {
 
 //* create 함수의 파라미터에 함수 형태로 state의 초기값과 state를 변경하는 함수를 선언
 // zustand에서는 set함수를 사용하여 상태를 업데이트
-const useStore = create<CountState>(set => ({
+export const useStore = create<CountState>(set => ({
   count: 0,
   increment: () => set(state => ({ count: state.count + 1})),
   decrement: () => set(state => ({
