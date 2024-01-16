@@ -65,6 +65,13 @@ import About from './pages/about'
 // 동적으로 URL 매개변수를 사용하는 컴포넌트
 import User from './pages/user';
 
+//! 의존성 설치 (필요한 라이브러리 설치)
+// : zustand, json-server, axios
+// npm i zustand json-server axios
+
+//? 1. 서버 데이터 파일 생성: json-server 설정
+// 프로젝트 루트에 db.json파일 생성
+
 function App() {
   return (
     <>

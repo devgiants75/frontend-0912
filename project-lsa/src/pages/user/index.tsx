@@ -10,4 +10,4 @@ export default function Index() {
       User Id: {userId}
     </div>
   )
-}~
+}
