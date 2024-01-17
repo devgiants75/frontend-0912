@@ -72,6 +72,9 @@ import User from './pages/user';
 //? 1. 서버 데이터 파일 생성: json-server 설정
 // 프로젝트 루트에 db.json파일 생성
 
+import BookList from './pages/BookList';
+import BookDetail from './pages/BookDetail';
+
 function App() {
   return (
     <>
@@ -86,6 +89,7 @@ function App() {
           <li><Link to='/about'>About</Link></li>
           <li><Link to='/user/1'>User 1</Link></li>
           <li><Link to='/user/2'>User 2</Link></li>
+          <li><Link to='/book'>Book</Link></li>
         </ul>
       </nav>
       <Routes>
@@ -97,6 +101,11 @@ function App() {
 
         {/* 동적 컴포넌트 사용 예시 */}
         <Route path='/user/:userId' element={<User />} />
+
+        {/* 책 목록 > 상세페이지 컴포넌트 예시 */}
+        <Route path='/book' element={<BookList />} />
+        {/* 동적 경로에서 책 상세 페이지 표시 */}
+        <Route path='/book/:bookId' element={<BookDetail />} />
       </Routes>
       {/* a화면 - 로그인, 회원가입 */}
 
