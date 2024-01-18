@@ -74,6 +74,7 @@ import User from './pages/user';
 
 import BookList from './pages/BookList';
 import BookDetail from './pages/BookDetail';
+import Login from './pages/cookie/Login';
 
 function App() {
   return (
@@ -106,6 +107,7 @@ function App() {
         <Route path='/book' element={<BookList />} />
         {/* 동적 경로에서 책 상세 페이지 표시 */}
         <Route path='/book/:bookId' element={<BookDetail />} />
+        <Route path='/login' element={<Login />} />
       </Routes>
       {/* a화면 - 로그인, 회원가입 */}
 

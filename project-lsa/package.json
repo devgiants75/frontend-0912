@@ -13,6 +13,7 @@
     "axios": "^1.6.5",
     "json-server": "^1.0.0-alpha.21",
     "react": "^18.2.0",
+    "react-cookie": "^7.0.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.2",
     "react-scripts": "5.0.1",
