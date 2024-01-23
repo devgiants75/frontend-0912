@@ -8,7 +8,7 @@ const API_URL = 'http://localhost:5000';
 export default function Login() {
   const [userId, setUserId] = useState('');
   const [password, setPassword] = useState('');
-  const [cookies, setCookie] = useCookies(['token']);
+  const [cookies, setCookie, removeCookie] = useCookies(['token']);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -20,6 +20,12 @@ export default function Login() {
       console.error(error);
     }
   }
+
+  const logout = () => {
+    // removeCookie('token', {path: '/'});
+    setCookie('token', '', {path: '/', expires: new Date(0)});
+  }
+
   return (
     <>
       <form onSubmit={handleLogin}>
@@ -35,6 +41,7 @@ export default function Login() {
         />
         <button type='submit'>로그인</button>
       </form>
+      <button onClick={logout}>로그아웃</button>
     </>
   )
 }
