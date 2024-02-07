@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { useAuthStore } from './store';
 import { useCookies } from 'react-cookie';
+import NaverLoginButton from './NaverLoginButton';
 
 const API_URL = 'http://localhost:5000';
 
@@ -41,7 +42,9 @@ export default function Login() {
         />
         <button type='submit'>로그인</button>
       </form>
+      <NaverLoginButton />
       <button onClick={logout}>로그아웃</button>
+
     </>
   )
 }

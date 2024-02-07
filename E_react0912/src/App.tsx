@@ -34,7 +34,6 @@ function App() {
       <GlobalStyle />
       <ThemeProvider>
         <Routes>
-          <h1 style={{ color: 'pink'}}>안녕</h1>
           {/* 
             npm run start
             기본 경로 - localhost: 3000

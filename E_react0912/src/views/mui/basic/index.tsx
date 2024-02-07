@@ -70,6 +70,15 @@ export const theme = createTheme({
 //! 스타일 커스터마이징
 // sx 속성
 // : MUI 컴포넌트의 스타일을 변경 속성
+// : 개별 컴포넌트에 사용자 정의 스타일 적용
+// - 일반적인 스타일 지정
+// : 카멜 케이스 (camelCase) 사용
+// - Box Model 관련 공간 지정
+// : 유틸리티 속성
+// bgcolor (색상 변환)
+// m(margin), p(padding)
+// >> mt(margin top), mr, mb, ml
+// >> pt(padding top), pr, pb, pl
 
 export default function Index() {
   return (
@@ -95,6 +104,25 @@ export default function Index() {
         >
           더보기
         </Button>
+      </Box>
+
+      {/* sx 속성 사용 */}
+      <Box 
+        sx={{ 
+          color: 'primary.contrastText', 
+          bgcolor: 'primary.main', 
+          width: 100, 
+          borderRadius: 8,
+          '@media (min-width: 600px)': {width: 250, fontSize: 40},
+          '&:hover': {bgcolor: 'primary.light'},
+          display: 'flex',
+          justiryContent: 'center',
+          m: 10,
+          p: 10,
+          maxWidth: 300,
+          maxHeight: 150
+        }}>
+        This is a box
       </Box>
     </>
   )
