@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 : 로그인</title>
+    <link rel="stylesheet" href="./a_naver.css" />
+    <script>
+        const onSubmitHandler = () => {
+            const form = document.getElementById('form');
+            const id = document.getElementById('id').value;
+            if (!id.trim()) {
+                document.getElementById('sign-in-error').style.display = 'block';
+                return;
+            }
+            document.getElementById('sign-in-error').style.display = 'none';
+            form.submit();
+        }
+    </script>
+</head>
+<body>
+    <!--# Header -->
+    <div class="header">
+        <div class="header-inner">
+            <a href="https://naver.com" class="logo">
+                <h1 class="blind">NAVER</h1>
+            </a>
+            <div class="lang">
+                <select class="select">
+                    <option value="ko_KR">한국어</option>
+                    <option value="en_US">English</option>
+                    <option value="zh-Hans_CN">中文(简体)</option>
+                    <option value="zh-Hant_TW">中文(台灣)</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <!--# Main -->
+    <div class="main">
+        <div class="content">
+            <!--! 로그인 wrapper -->
+            <div class="sign-in-wrapper">
+                <form id="form" action="https://nid.naver.com/nidlogin.login" method="POST">
+                    <ul class="panel-wrapper">
+                        <li class="panel-item">
+                            <div class="panel-inner">
+                                <!--! Id Password wrapper -->
+                                <div class="id-password-wrapper">
+                                    <div class="input-row">
+                                        <div class="icon-cell">
+                                            <span class="icon-id">
+                                                <span class="blind">아이디</span>
+                                            </span>
+                                        </div>
+                                        <input type="text" class="input-text" maxlength="41" placeholder="아이디" name="id" id="id" />
+                                    </div>
+                                    <div class="input-row">
+                                        <div class="icon-cell">
+                                            <span class="icon-pw">
+                                                <span class="blind">비밀번호</span>
+                                            </span>
+                                        </div>
+                                        <input type="password" class="input-text" maxlength="16" placeholder="비밀번호" name="pw" id="pw" />
+                                    </div>
+                                </div>
+                                <!--! Sign In Keep wrapper -->
+                                <div class="sign-in-keep-wrapper">
+                                    <div class="keep-check">
+                                        <input type="checkbox" class="input-keep" value="off"/>
+                                        <label class="keep-text">로그인 상태 유지</label>
+                                    </div>
+                                    <div class="ip-check"></div>
+                                </div>
+                                <!--! Sign In Error -->
+                                <div id="sign-in-error" class="sign-in-error" style="display: none;">
+                                    <div class="error-message">
+                                        <strong>아이디</strong>를 입력하세요.
+                                    </div>
+                                </div>
+                                <!--! Sign In Button wrapper -->
+                                <div class="sigin-in-button-wrapper">
+                                    <button type="button" class="sign-in-button" onClick="onSubmitHandler();">
+                                        <span class="button-text">로그인</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            <!--! 페이지 이동 네비게이션 -->
+            <ul class="find-wrapper">
+                <li>
+                    <a class="find-text" href="https://nid.naver.com/user2/api/route?m=routePwInquiry&lang=ko_KR">비밀번호 찾기</a>
+                </li>
+                <li>
+                    <a class="find-text" href="https://nid.naver.com/user2/api/route?m=routeIdInquiry&lang=ko_KR">아이디 찾기</a>
+                </li>
+                <li>
+                    <a class="find-text" href="https://nid.naver.com/user2/V2Join?m=agree&lang=ko_KR">회원가입</a>
+                </li>
+            </ul>
+            <!--! 광고 배너 -->
+            <div class="banner-wrapper">
+                <div class="banner-content">
+                    <img class="banner-img" src="https://ssl.pstatic.net/melona/libs/1378/1378592/f1a7920ede18d3113dc9_20240326143514456.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--# Footer -->
+    <div class="footer">
+        <div class="footer-inner">
+            <ul class="footer-link">
+                <li><a class="footer-item"><span class="text">이용약관</span></a></li>
+                <li><a class="footer-item"><span class="text"><strong>개인정보처리방침</strong></span></a></li>
+                <li><a class="footer-item"><span class="text">책임의 한계와 법적고지</span></a></li>
+                <li><a class="footer-item"><span class="text">회원정보 고객센터</span></a></li>
+            </ul>
+            <div class="footer-copy">
+                <a href="https://www.navercorp.com">
+                    <span class="footer-logo">
+                        <span class="blind">네이버</span>
+                    </span>
+                </a>
+                <span class="text">Copylight</span>
+                <span class="copy">© NAVER Corp.</span>
+                <span class="text">All Rights Reserved.</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

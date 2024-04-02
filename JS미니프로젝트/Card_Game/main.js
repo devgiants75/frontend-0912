@@ -84,10 +84,16 @@ document.addEventListener("DOMContentLoaded", () => {
   let firstCard, secondCard;
   let lockBoard = false;
 
+  let isGameStarted = false; // 게임 시작 상태 추적을 위한 변수 추가
+
   //! 카드를 뒤집는 함수 정의
   function flipCard() {
     // 게임판이 잠겨 있으면 더 이상 카드를 뒤집지 X
     if (lockBoard) return;
+
+    // 게임이 시작되지 않았거나 게임판이 잠겨 있으면 더 이상 카드를 뒤집지 않음
+    if (!isGameStarted || lockBoard) return;
+
     // 클릭한 카드를 뒤집기
     this.classList.add('flipped');
 
@@ -153,6 +159,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //! 'start-button' 버튼에 클릭 이벤트 리스너 추가
   startButton.addEventListener('click', () => {
+    isGameStarted = true; // 게임이 시작됨
+
     // 게임을 초기화하는 함수 호출
     initializeGame();
     // 현재 시간을 게임 시작 시간으로 설정
@@ -165,6 +173,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //! 'reset-button' 버튼에 클릭 이벤트 리스너 추가
   resetButton.addEventListener('click', () => {
+    isGameStarted = true; // 게임이 다시 시작됨
+
     // 게임을 초기화하는 함수 호출
     initializeGame();
     // 현재 시간을 게임 시작 시간으로 설정
@@ -186,6 +196,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 모든 카드가 뒤집혔는지 확인 후 조건에 따라 다른 행동을 작성
     if (allFlipped) {
+      isGameStarted = false; // 게임이 완료되면 시작 상태를 false로 설정
+
       // 모든 카드가 뒤집혔다면
       // 현재 시간이서 게임 시작 시간을 뺀다.
       const gameTime = new Date() - gameStartTime;
