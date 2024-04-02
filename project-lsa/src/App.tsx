@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Link, Route, Routes } from 'react-router-dom';
+import UseNavigate from './pages/useNavigate'
 
 //! React-Router-Dom
 // : React 앱에서 클라이언트 사이드 라우팅을 구현하기 위한 라이브러리
@@ -75,6 +76,7 @@ import User from './pages/user';
 import BookList from './pages/BookList';
 import BookDetail from './pages/BookDetail';
 import Login from './pages/cookie/Login';
+import LoginCallbackPage from './pages/cookie/LoginCallbackPage';
 
 function App() {
   return (
@@ -98,7 +100,12 @@ function App() {
           path경로에 /만 지정할 경우 해당 Route의 메인 URL로 연결 
         */}
         <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
+        {/* 부모 컴포넌트 */}
+        <Route path='/about' element={<About />}>
+          {/* 자식 컴포넌트 */}
+          <Route path='child1' element={<Login />} />
+          <Route path='child2' element={<Login />} />
+        </Route>
 
         {/* 동적 컴포넌트 사용 예시 */}
         <Route path='/user/:userId' element={<User />} />
@@ -108,6 +115,9 @@ function App() {
         {/* 동적 경로에서 책 상세 페이지 표시 */}
         <Route path='/book/:bookId' element={<BookDetail />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/useNavigate' element={<UseNavigate />} />
+        
+        <Route path='/login/callback' element={<LoginCallbackPage />} />
       </Routes>
       {/* a화면 - 로그인, 회원가입 */}
 

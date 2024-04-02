@@ -14,6 +14,7 @@ import Index0108 from "./views/0108/react";
 import Index0109 from "./views/0109";
 import Index0111 from "./views/0111";
 import Index0112 from "./views/0112";
+import Mui from "./views/mui";
 
 import ThemeProvider from "./views/0105/a_ContextAPI/ThemeProvider";
 import { createGlobalStyle } from "styled-components";
@@ -33,7 +34,6 @@ function App() {
       <GlobalStyle />
       <ThemeProvider>
         <Routes>
-          <h1 style={{ color: 'pink'}}>안녕</h1>
           {/* 
             npm run start
             기본 경로 - localhost: 3000
@@ -58,6 +58,7 @@ function App() {
           <Route path="/0111" element={<Index0111 />} />
           <Route path="/0112" element={<Index0112 />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/mui" element={<Mui />} />
         </Routes>
       </ThemeProvider>
     </>

@@ -7,5 +7,5 @@ interface AuthState {
 
 export const useAuthStore = create<AuthState>((set) => ({
   token: null,
-  setToken: (token) => set({ token }),
+  setToken: (token) => set({ token })
 }))
